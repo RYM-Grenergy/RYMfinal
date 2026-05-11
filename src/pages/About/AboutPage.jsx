@@ -8,7 +8,8 @@ import {
 } from 'react-icons/fa';
 import leaderOne from '../../assets/images/YR.png';
 import leaderTwo from '../../assets/images/AryanSani.png';
-import leaderThree from '../../assets/images/image copy.png';
+import leaderThree from '../../assets/images/image copy.jpeg';
+import leaderFour from '../../assets/images/Saurav.jpeg';
 import topAboutImage from '../../assets/images/Section_Image.jpeg';
 import aboutImageOne from '../../assets/images/achievement_kpit_gold_award.jpg';
 import aboutImageTwo from '../../assets/images/achievement_nrl_group_photo.jpg';
@@ -28,11 +29,17 @@ const leaders = [
     image: leaderTwo,
   },
   {
-    name: 'Khushi Minda',
-    role: 'VP, Prod. Dev',
-    text: 'Specializes in Electronics, leading the design and innovation of smart energy systems, IoT devices, and advanced automation solutions for enhanced efficiency and sustainability.',
+    name: 'Dheeraj Anand',
+    role: 'Business Technology Consultant',
+    text: 'Founder at Bworth Technologies Pvt. Ltd. Director at VegaVruddhi Pvt. Ltd. Building scalable, impact-driven businesses and leading innovation-driven ventures with a focus on growth, technology, and long-term value creation.',
     image: leaderThree,
   },
+  {
+  name: 'Saurav Jain',
+  role: 'Director',
+  text: ' Business leader and entrepreneur with expertise in business strategy, sales, marketing, IT strategy, and business development. As Director at RYM Grenergy and Founder of VegaVruddhi Private Limited, he focuses on building scalable, innovation-driven ventures that create long-term impact.',
+  image: leaderFour,
+},
 ];
 
 const AboutPage = () => {
@@ -63,69 +70,72 @@ const AboutPage = () => {
               </div>
 
               <div className="lg:col-span-11">
-                {/* First Leader - Yograj Rundhanker */}
-                <motion.article
-                  className="flex flex-col items-center mb-16 max-w-2xl mx-auto"
-                  initial={{ opacity: 0, y: 25 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <div className="flex flex-row items-end gap-6 md:gap-8 mb-6 ml-[-2rem] md:ml-0">
-                    <motion.div
-                      className="relative w-48 h-56 md:w-56 md:h-64 overflow-hidden group cursor-pointer bg-zinc-200"
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <img
-                        src={leaders[0].image}
-                        alt={leaders[0].name}
-                        className="w-full h-full object-cover object-bottom transition-all duration-500 group-hover:scale-105"
-                      />
-                      <div className="absolute bottom-0 left-0 right-0 h-[45%] bg-emerald-400/80 transition-all duration-500 group-hover:bg-emerald-400/90 pointer-events-none"></div>
-                    </motion.div>
-                    <div className="pb-4">
-                      <h3 className="text-2xl md:text-3xl font-medium text-white">{leaders[0].name}</h3>
-                      <div className="w-12 h-0.5 bg-emerald-400 my-2" />
-                      <p className="text-zinc-500 italic text-lg">{leaders[0].role}</p>
-                    </div>
-                  </div>
-                  <motion.div
-                    className="text-center text-sm md:text-base text-zinc-400 italic leading-relaxed max-w-lg px-4"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 }}
-                  >
-                    {leaders[0].text}
-                  </motion.div>
-                </motion.article>
-
-                {/* Other Two Leaders - Side by Side */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 max-w-4xl mx-auto">
-                  {leaders.slice(1).map((leader, index) => (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-6xl mx-auto">
+                  {leaders.slice(0, 2).map((leader, index) => (
                     <motion.article
                       key={leader.name}
                       className="flex flex-col"
                       initial={{ opacity: 0, y: 25 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
-                      transition={{ delay: (index + 1) * 0.1, duration: 0.5 }}
+                      transition={{ delay: index * 0.1, duration: 0.5 }}
                     >
-                      <div className="flex flex-row items-end gap-4 md:gap-5 mb-4">
+                      <div className="flex flex-row items-start gap-4 md:gap-5 mb-4">
                         <motion.div
-                          className="relative w-36 h-48 md:w-44 md:h-56 overflow-hidden group cursor-pointer bg-zinc-200 shrink-0"
-                          whileHover={{ scale: 1.02 }}
+                          className="relative w-40 h-56 md:w-52 md:h-64 overflow-hidden group cursor-pointer bg-zinc-900 shrink-0 rounded-lg shadow-lg shadow-emerald-500/10 border border-emerald-500/20"
+                          whileHover={{ scale: 1.03, y: -4 }}
                           transition={{ duration: 0.3 }}
                         >
                           <img
                             src={leader.image}
                             alt={leader.name}
-                            className="w-full h-full object-cover object-bottom transition-all duration-500 group-hover:scale-105"
+                            className="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
                           />
-                          <div className="absolute bottom-0 left-0 right-0 h-[45%] bg-emerald-400/80 transition-all duration-500 group-hover:bg-emerald-400/90 pointer-events-none"></div>
+                          <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-emerald-500/90 via-emerald-500/50 to-transparent transition-all duration-500 group-hover:from-emerald-400/95 pointer-events-none"></div>
                         </motion.div>
-                        <div className="pb-2">
+                        <div className="pt-2">
+                          <h3 className="text-xl md:text-2xl font-medium text-white">{leader.name}</h3>
+                          <div className="w-10 h-0.5 bg-emerald-400 my-2" />
+                          <p className="text-zinc-500 italic text-md">{leader.role}</p>
+                        </div>
+                      </div>
+                      <motion.div
+                        className="text-xs md:text-sm text-zinc-400 italic leading-relaxed"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3 }}
+                      >
+                        {leader.text}
+                      </motion.div>
+                    </motion.article>
+                  ))}
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 max-w-6xl mx-auto mt-12">
+                  {leaders.slice(2).map((leader, index) => (
+                    <motion.article
+                      key={leader.name}
+                      className="flex flex-col"
+                      initial={{ opacity: 0, y: 25 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: (index + 2) * 0.1, duration: 0.5 }}
+                    >
+                      <div className="flex flex-row items-start gap-4 md:gap-5 mb-4">
+                        <motion.div
+                          className="relative w-40 h-56 md:w-52 md:h-64 overflow-hidden group cursor-pointer bg-zinc-900 shrink-0 rounded-lg shadow-lg shadow-emerald-500/10 border border-emerald-500/20"
+                          whileHover={{ scale: 1.03, y: -4 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <img
+                            src={leader.image}
+                            alt={leader.name}
+                            className="w-full h-full object-cover object-top transition-all duration-500 group-hover:scale-110 group-hover:brightness-110"
+                          />
+                          <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-emerald-500/90 via-emerald-500/50 to-transparent transition-all duration-500 group-hover:from-emerald-400/95 pointer-events-none"></div>
+                        </motion.div>
+                        <div className="pt-2">
                           <h3 className="text-xl md:text-2xl font-medium text-white">{leader.name}</h3>
                           <div className="w-10 h-0.5 bg-emerald-400 my-2" />
                           <p className="text-zinc-500 italic text-md">{leader.role}</p>
@@ -155,7 +165,7 @@ const AboutPage = () => {
             <div>
               <h2 className="text-4xl md:text-5xl font-semibold mb-8">We are RYM Grenergy</h2>
               <p className="text-zinc-300 max-w-2xl leading-relaxed mb-4">
-                In 2022, we announced a bold and simple plan: to enable the future of energy by developing the world&apos;s greenest battery cell.
+                In 2023, we announced a bold and simple plan: to enable the future of energy by developing the world&apos;s greenest battery cell.
               </p>
               <p className="text-zinc-300 max-w-2xl leading-relaxed text-sm">
                 RYM Grenergy is a deep-tech company focused on building sustainable energy solutions and intelligent systems. We are committed to driving innovation in energy and advanced technologies.

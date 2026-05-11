@@ -133,13 +133,13 @@ const Hero = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                            className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-10 w-full"
+                            className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-10 w-full items-center sm:items-start"
                         >
                             <button
                                 type="button"
                                 onClick={handleContact}
                                 onTouchEnd={handleContact}
-                                className="group flex w-full max-w-[280px] sm:w-[170px] sm:max-w-[220px] h-[55px] bg-zinc-900 rounded-[40px] shadow-[0_5px_15px_rgba(16,185,129,0.2)] justify-between items-center border border-zinc-800 hover:border-emerald-500/50 hover:shadow-[0_10px_25px_rgba(16,185,129,0.4)] transition-all duration-300 touch-manipulation"
+                                className="group flex w-full max-w-[280px] sm:w-[170px] sm:max-w-[220px] h-[55px] bg-zinc-900 rounded-[40px] shadow-[0_5px_15px_rgba(16,185,129,0.2)] justify-between items-center border border-zinc-800 hover:border-emerald-500/50 hover:shadow-[0_10px_25px_rgba(16,185,129,0.4)] transition-all duration-300 touch-manipulation mx-auto sm:mx-0"
                             >
                                 <span className="flex-1 h-full flex items-center justify-center text-white text-[1rem] font-semibold tracking-[1.2px] uppercase">
                                     Let's go!
@@ -187,7 +187,7 @@ const Hero = () => {
 
                                 <button
                                     type="button"
-                                    className="btn-2 touch-manipulation"
+                                    className="btn-2 touch-manipulation mx-auto sm:mx-0"
                                     onClick={handleExplore}
                                     onTouchEnd={handleExplore}
                                     aria-label="Explore Solutions"

@@ -59,7 +59,7 @@ const FeaturedCard = ({ project }) => {
 
     return (
         <motion.div
-            className="flex flex-col md:flex-row bg-white/5 backdrop-blur-[10px] border border-white/10 rounded-[32px] p-[32px] md:p-[48px] gap-[30px] md:gap-[40px] items-center text-center md:text-left relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-[#00ff88]/30 hover:shadow-[0_20px_40px_rgba(0,255,136,0.1)] group cursor-default"
+            className="flex flex-col md:flex-row bg-white/5 backdrop-blur-[10px] border border-white/10 rounded-[32px] pt-[78px] md:pt-[32px] p-[24px] md:p-[48px] gap-[24px] md:gap-[40px] items-center text-center md:text-left relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-[#00ff88]/30 hover:shadow-[0_20px_40px_rgba(0,255,136,0.1)] group cursor-default"
             ref={cardRef}
             onMouseMove={handleMouseMove}
             initial={{ opacity: 0, y: 40 }}
@@ -68,14 +68,14 @@ const FeaturedCard = ({ project }) => {
             transition={{ duration: 0.8, ease: "easeOut" }}
         >
             <div className="absolute inset-0 bg-[radial-gradient(1200px_circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),rgba(0,255,136,0.08),transparent_40%)] z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-            <div className="absolute top-[24px] right-1/2 translate-x-1/2 md:translate-x-0 md:top-[32px] md:right-[32px] bg-gradient-to-br from-[#00ff88] to-[#00ffee] text-black px-4 py-1.5 rounded-full text-[0.8rem] font-[700] uppercase tracking-[1px] z-10">Flagship Innovation</div>
-            <div className="w-[100px] h-[100px] bg-[#00ff88]/10 border border-[#00ff88]/30 rounded-[24px] flex flex-shrink-0 items-center justify-center text-[#00ff88] text-[3rem] z-10 shadow-[0_0_20px_rgba(0,255,136,0.2)]">
+            <div className="absolute top-4 left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:top-[32px] md:right-[32px] bg-gradient-to-br from-[#00ff88] to-[#00ffee] text-black px-4 py-1.5 rounded-full text-[0.8rem] font-[700] uppercase tracking-[1px] z-10 whitespace-nowrap text-center">AI Flagship Innovation</div>
+            <div className="w-[84px] h-[84px] md:w-[100px] md:h-[100px] bg-[#00ff88]/10 border border-[#00ff88]/30 rounded-[24px] flex flex-shrink-0 items-center justify-center text-[#00ff88] text-[2.4rem] md:text-[3rem] z-10 shadow-[0_0_20px_rgba(0,255,136,0.2)] mx-auto md:mx-0 mt-2 md:mt-0">
                 <FaRocket />
             </div>
-            <div className="flex-1 z-10">
-                <h3 className="text-[clamp(1.5rem,6vw,2.2rem)] lg:text-[clamp(2.2rem,4vw,3rem)] font-[800] mb-3 text-white">{project.name}</h3>
-                <p className="text-[1.25rem] text-[#a0a0a0] leading-[1.6]">{project.client}</p>
-                <div className="mt-5 flex flex-wrap justify-center md:justify-start gap-[15px]">
+            <div className="flex-1 z-10 w-full">
+                <h3 className="text-[clamp(1.35rem,5vw,2.2rem)] lg:text-[clamp(2.2rem,4vw,3rem)] font-[800] mb-3 text-white leading-tight">{project.name}</h3>
+                <p className="text-[0.98rem] md:text-[1.25rem] text-[#a0a0a0] leading-[1.6]">{project.client}</p>
+                <div className="mt-5 flex flex-col sm:flex-row flex-wrap justify-center md:justify-start gap-3 md:gap-[15px]">
                     <span className="text-[0.9rem] text-[#00ff88] flex items-center gap-[5px]">
                         <FaCheckCircle size={12} /> Active Deployment
                     </span>

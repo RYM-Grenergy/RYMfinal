@@ -36,10 +36,9 @@ const About = () => {
                             transition={{ duration: 0.8 }}
                         />
                         <span className="text-emerald-400 uppercase tracking-[0.3em] text-xs sm:text-sm font-bold">
-                            Engineering the Future
+                            Building the Future
                         </span>
                     </motion.div>
-
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +56,7 @@ const About = () => {
                         transition={{ delay: 0.2, duration: 0.8 }}
                         className="text-[clamp(0.95rem,3vw,1.1rem)] lg:text-[clamp(1.1rem,2vw,1.25rem)] text-zinc-400 font-light leading-relaxed max-w-4xl"
                     >
-                        Leading the future of sustainable energy solutions through architectural innovation and intelligent systems.
+                        We create practical, future-ready solutions that help businesses scale, adapt, and deliver long-term impact.
                     </motion.p>
                 </div>
 
@@ -82,41 +81,41 @@ const About = () => {
                             }}
                             transition={{ duration: 3, repeat: Infinity }}
                         />
-                        <div className="relative rounded-[2.5rem] overflow-hidden border border-emerald-500/20 lg:border-white/10 ring-1 ring-emerald-500/10 shadow-2xl aspect-[4/3] md:aspect-[3/2]">
+                        <div className="relative rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-emerald-500/20 lg:border-white/10 ring-1 ring-emerald-500/10 shadow-2xl aspect-[4/3] md:aspect-[3/2]">
                             <img
                                 src={aboutImage}
                                 alt="Tactical Energy Operations"
-                                className="w-full h-full object-cover group-hover:grayscale-0 transition-all duration-700"
+                                className="w-full h-full object-cover object-center scale-[1.03] md:scale-100 group-hover:grayscale-0 transition-all duration-700"
                             />
                             <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
 
                             {/* Tactical Energy Operations Label */}
                             <motion.div
-                                className="absolute top-6 left-6 right-6"
+                                className="absolute top-4 left-4 right-4 md:top-6 md:left-6 md:right-6"
                                 initial={{ opacity: 0, y: -10 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3 }}
                             >
-                                <div className="bg-black/70 backdrop-blur-xl border border-emerald-500/40 px-4 py-3 rounded-xl hover:border-emerald-500/80 transition-all duration-300">
-                                    <span className="text-emerald-300 font-bold text-sm tracking-widest uppercase">
-                                        ◆Tactical Energy Operations
+                                <div className="bg-black/70 backdrop-blur-xl border border-emerald-500/40 px-3 py-2 md:px-4 md:py-3 rounded-xl hover:border-emerald-500/80 transition-all duration-300">
+                                    <span className="text-emerald-300 font-bold text-[10px] md:text-sm tracking-widest uppercase">
+                                        ◆Strategic Impact Operations
                                     </span>
                                 </div>
                             </motion.div>
 
                             {/* Floating Stat Overlay */}
                             <motion.div
-                                className="absolute bottom-4 md:bottom-6 left-4 md:left-6 right-4 md:right-6 grid grid-cols-3 gap-3 md:gap-4"
+                                className="absolute bottom-3 md:bottom-6 left-3 md:left-6 right-3 md:right-6 grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.4 }}
                             >
                                 {[
-                                    { label: 'Innovation Focus', value: 'Artificial Intelligence', icon: <FaCogs /> },
-                                    { label: 'Global Standard', value: 'Internet of things', icon: <FaGlobeEurope /> },
-                                    { label: 'Future-Proof', value: 'Deep Learning', icon: <FaProjectDiagram /> }
+                                    { label: 'Scalable Systems', value: 'Enterprise Ready', icon: <FaCogs /> },
+                                    { label: 'Global Standard', value: 'Connected Operations', icon: <FaGlobeEurope /> },
+                                    { label: 'Future-Proof', value: 'Business Growth', icon: <FaProjectDiagram /> }
                                 ].map((stat, i) => (
                                     <motion.div
                                         key={i}
@@ -125,6 +124,7 @@ const About = () => {
                                     >
                                         <div className="text-emerald-400 text-base md:text-lg mb-2 flex justify-center group-hover/stat:scale-110 transition-transform duration-300">{stat.icon}</div>
                                         <div className="text-[10px] md:text-xs text-zinc-300 uppercase tracking-wider leading-tight font-medium">{stat.value}</div>
+                                        <div className="mt-1 text-[9px] md:text-[10px] text-zinc-500 uppercase tracking-[0.16em] text-center">{stat.label}</div>
                                     </motion.div>
                                 ))}
                             </motion.div>
@@ -139,17 +139,6 @@ const About = () => {
                         transition={{ duration: 0.8 }}
                         className="order-1 lg:order-2"
                     >
-                        <motion.span
-                            className="text-emerald-400 font-mono text-xs md:text-sm mb-6 md:mb-8 block tracking-widest uppercase font-bold flex items-center gap-2"
-                            initial={{ opacity: 0 }}
-                            whileInView={{ opacity: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.2 }}
-                        >
-                            <span className="w-2 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                            RYM Grenergy Operations
-                        </motion.span>
-
                         <h3 className="text-[clamp(1.6rem,5vw,2.5rem)] lg:text-[clamp(2.5rem,4vw,4rem)] font-bold text-white mb-8 md:mb-10 leading-[1.2] tracking-tight">
                             <motion.span
                                 initial={{ opacity: 0, y: 20 }}
@@ -167,7 +156,7 @@ const About = () => {
                                 transition={{ delay: 0.3 }}
                                 className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400"
                             >
-                                Intelligent Systems with AI & IoT
+                                Scalable Business Solutions
                             </motion.span>
                         </h3>
                     </motion.div>
@@ -183,19 +172,19 @@ const About = () => {
                         transition={{ delay: 0.4 }}
                     >
                         <p className="text-zinc-300">
-                            In 2022, we announced a bold and simple plan: to enable the future of energy by developing the <span className="text-emerald-400 font-semibold">world's greenest battery cell</span>.
+                            We build solutions that help businesses move faster, operate smarter, and create measurable long-term value.
                         </p>
                         <p>
-                            RYM Grenergy is a deep-tech company focused on building <span className="text-white font-medium">sustainable energy solutions</span> and intelligent systems. We are committed to driving innovation in energy and advanced technologies. We specialize in AI-driven solutions, smart automation platforms, IoT-enabled hardware, and embedded systems.
+                            RYM Grenergy is focused on practical innovation across hardware, software, and automation. We work on connected platforms, process improvement, and reliable systems built for real-world use.
                         </p>
                         <p>
-                            By combining <span className="text-emerald-300 font-semibold">artificial intelligence, edge computing, and smart hardware design</span>, we create scalable solutions that solve real-world challenges across energy, infrastructure, mobility, and industrial domains. Our goal is to develop efficient, resilient, and sustainable technologies that empower industries and contribute to a smarter, greener future.
+                            By combining strong design, engineering discipline, and scalable thinking, we create solutions that support growth across energy, infrastructure, mobility, and industrial domains.
                         </p>
                     </motion.div>
 
                     <motion.button
                         onClick={() => navigate('/contact')}
-                        className="group relative px-8 md:px-10 py-3.5 md:py-4 rounded-full border border-emerald-500/50 bg-gradient-to-r from-emerald-500/10 to-teal-500/5 text-emerald-300 font-bold hover:text-white overflow-hidden transition-all duration-300 flex items-center gap-3 active:scale-95 text-sm md:text-base w-fit"
+                        className="group relative px-8 md:px-10 py-3.5 md:py-4 rounded-full border border-emerald-500/50 bg-gradient-to-r from-emerald-500/10 to-teal-500/5 text-emerald-300 font-bold hover:text-white overflow-hidden transition-all duration-300 flex items-center gap-3 active:scale-95 text-sm md:text-base w-full sm:w-fit justify-center sm:justify-start"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                         initial={{ opacity: 0, y: 20 }}

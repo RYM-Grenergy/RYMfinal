@@ -254,7 +254,7 @@ export const testimonialsData = [
   }
 ];
 export const projectsData = [
-  { id: 'featured', name: 'ULTRON', client: 'Deployed with GKM Energy', featured: true },
+  { id: 'featured', name: 'AI RECOGNITION SYSTEMS', client: 'Automated Attendance and Monitoring', featured: true },
   { id: '01', name: 'Weighbridge AI', client: 'DMG, Rajasthan' },
   { id: '02', name: 'DamChat', client: 'ICED, IIT Roorkee' },
   { id: '03', name: 'BULK ATTENDANCE SYSTEM', client: 'GD Goenka University' },

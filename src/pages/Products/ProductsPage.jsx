@@ -71,11 +71,19 @@ const ProductCard = ({ product, onOpen, index }) => {
       <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
       {/* image */}
-      <div className="relative h-[200px] md:h-[220px] w-full overflow-hidden bg-[#050505] flex items-center justify-center p-8 md:p-10">
+      <div
+        className="relative h-[200px] md:h-[220px] w-full overflow-hidden bg-[#050505]"
+        style={{
+          backgroundImage: `url(${product.image})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-[#050505]/55 backdrop-blur-[18px]" />
         <img
           src={product.image}
           alt={product.name}
-          className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 group-hover:brightness-110"
+          className="relative z-10 w-full h-full object-contain object-center transition-transform duration-700 group-hover:scale-110 group-hover:brightness-110"
         />
         {/* overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80 pointer-events-none" />
