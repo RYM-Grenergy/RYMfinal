@@ -106,7 +106,7 @@ const About = () => {
 
                             {/* Floating Stat Overlay */}
                             <motion.div
-                                className="absolute bottom-3 md:bottom-6 left-3 md:left-6 right-3 md:right-6 grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4"
+                                className="absolute bottom-3 md:bottom-6 left-3 md:left-6 right-3 md:right-6 hidden md:grid grid-cols-3 gap-2 md:gap-4"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
