@@ -2,6 +2,22 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const ThemeContext = createContext();
 
+const getStoredTheme = () => {
+  try {
+    return localStorage.getItem('theme-mode');
+  } catch {
+    return null;
+  }
+};
+
+const getSystemThemePreference = () => {
+  try {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  } catch {
+    return true;
+  }
+};
+
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {
@@ -12,20 +28,25 @@ export const useTheme = () => {
 
 export const ThemeProvider = ({ children }) => {
   const [isDark, setIsDark] = useState(() => {
-    // Check localStorage first
-    const saved = localStorage.getItem('theme-mode');
+    const saved = getStoredTheme();
     if (saved) {
       return saved === 'dark';
     }
-    // Check system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+    return getSystemThemePreference();
   });
 
   useEffect(() => {
-    // Update document root data attribute
-    document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
-    // Save preference
-    localStorage.setItem('theme-mode', isDark ? 'dark' : 'light');
+    try {
+      document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    } catch {
+      // Ignore environments that do not expose a document.
+    }
+
+    try {
+      localStorage.setItem('theme-mode', isDark ? 'dark' : 'light');
+    } catch {
+      // Ignore storage failures and keep the current session theme.
+    }
   }, [isDark]);
 
   const toggleTheme = () => {
