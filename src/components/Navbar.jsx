@@ -35,11 +35,10 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${
-        isScrolled 
-          ? 'py-3 backdrop-blur-xl bg-black/70 border-b border-white/10 shadow-lg shadow-black/20' 
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out ${isScrolled
+          ? 'py-3 backdrop-blur-xl bg-black/70 border-b border-white/10 shadow-lg shadow-black/20'
           : 'py-8 bg-transparent'
-      }`}
+        }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -53,12 +52,12 @@ const Navbar = () => {
             whileTap={{ scale: 0.95 }}
           >
             <Link to="/" className="block">
-              <img 
-                src={Logo} 
-                alt="RYM Grenergy Logo" 
-                className={`transition-all duration-300 ${
-                  isScrolled ? 'h-10 w-auto' : 'h-12 w-auto'
-                }`} 
+              <img
+                src={Logo}
+                alt="RYM Grenergy Logo"
+                className={`transition-all duration-300 object-contain ${isScrolled ? 'h-10 w-auto' : 'h-14 w-auto'
+                  }`}
+                style={{ imageRendering: 'high-quality' }}
               />
             </Link>
           </motion.div>
@@ -74,11 +73,10 @@ const Navbar = () => {
               >
                 <Link
                   to={item.to}
-                  className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full ${
-                    activeTab === item.to
+                  className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-full ${activeTab === item.to
                       ? 'text-emerald-400 bg-emerald-500/10 border border-emerald-500/20'
                       : 'text-gray-300 hover:text-white hover:bg-white/5'
-                  }`}
+                    }`}
                 >
                   <span className="relative z-10">{item.name}</span>
                   {activeTab === item.to && (
@@ -143,11 +141,10 @@ const Navbar = () => {
                     >
                       <Link
                         to={item.to}
-                        className={`block px-4 py-3 text-sm font-medium transition-all duration-200 rounded-xl ${
-                          activeTab === item.to
+                        className={`block px-4 py-3 text-sm font-medium transition-all duration-200 rounded-xl ${activeTab === item.to
                             ? 'text-emerald-400 bg-emerald-500/10 border border-emerald-500/20'
                             : 'text-gray-300 hover:text-white hover:bg-white/5'
-                        }`}
+                          }`}
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         {item.name}
