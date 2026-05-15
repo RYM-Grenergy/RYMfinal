@@ -138,7 +138,7 @@ const LoadingScreen = ({ onFinished }) => {
                         letterSpacing="4"
                         className="drawing-text-grenergy"
                     >
-                        Power Infrastructure
+                        Grenergy
                     </text>
                 </svg>
             </div>
