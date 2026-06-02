@@ -39,7 +39,7 @@ export const productsData = [
   {
     id: 2,
     name: 'Weighbridge AI',
-    description: 'Weighbridge AI is an intelligent traffic-optimization system that guides vehicles at ideal speeds to bypass red lights, reduce travel time, and cut fuel consumption. By integrating real-time data, smart routing, and social connectivity features, it transforms daily commuting into a faster, smoother, and more efficient experience for urban drivers.',
+    description: 'WeighBridge AI is a smart automation solution designed to improve weighbridge operations using artificial intelligence. It automatically reads vehicle number plates, validates vehicle positioning, and integrates with E-Rawanna systems for seamless verification. The system also uses weight pattern recognition to detect irregularities and improve accuracy. It helps reduce manual work, increase operational efficiency, and minimize errors. With faster deployment and improved uptime, WeighBridge AI enhances productivity and revenue management.',
     image: productAiDrive
   },
   {

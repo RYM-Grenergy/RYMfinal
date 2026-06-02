@@ -180,10 +180,10 @@ const Products = () => {
                                     </div>
 
                                     <button
-                                        className="mt-8 md:mt-12 py-4 md:py-5 bg-gradient-to-r from-[#10b981] to-[#059669] rounded-xl text-white text-[1rem] font-bold uppercase tracking-[1px] shadow-[0_10px_30px_rgba(16,185,129,0.3)] transition-all hover:scale-[1.02] active:scale-[0.98]"
+                                        className="mt-8 md:mt-12 py-4 md:py-5 bg-gradient-to-r from-[#10b981] to-[#059669] rounded-xl text-white text-[1rem] font-bold uppercase tracking-[1px] shadow-[0_10px_30px_rgba(16,185,129,0.3)] transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                                         onClick={() => setSelectedProduct(null)}
                                     >
-                                        Request Information
+                                        Close
                                     </button>
                                 </div>
                             </div>

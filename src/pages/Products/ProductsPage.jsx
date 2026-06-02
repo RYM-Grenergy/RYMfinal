@@ -131,11 +131,15 @@ const ContactForm = () => {
   const submit = (e) => {
     e.preventDefault();
     setSubmitting(true);
+    
+    const text = `Hi RYM Grenergy,\n\nI am requesting information regarding your products. Here are my details:\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}`;
+    const whatsappUrl = `https://wa.me/918200055645?text=${encodeURIComponent(text)}`;
+
     setTimeout(() => {
-      alert('Thank you! We will reach out to you soon.');
+      window.open(whatsappUrl, '_blank');
       setForm({ name: '', phone: '', email: '' });
       setSubmitting(false);
-    }, 1200);
+    }, 800);
   };
 
   return (

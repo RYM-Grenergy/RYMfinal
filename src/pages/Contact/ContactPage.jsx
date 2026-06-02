@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -22,13 +22,16 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
     setSubmitted(true);
     
+    const text = `Hi RYM Grenergy,\n\nI would like to get in touch with you. Here are my details:\nName: ${formData.fullName}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nMessage: ${formData.message}`;
+    const whatsappUrl = `https://wa.me/918200055645?text=${encodeURIComponent(text)}`;
+
     setTimeout(() => {
+      window.open(whatsappUrl, '_blank');
       setFormData({ fullName: '', phone: '', email: '', message: '' });
       setSubmitted(false);
-    }, 3000);
+    }, 800);
   };
 
   const contactLinks = [
@@ -43,6 +46,12 @@ const ContactPage = () => {
       label: 'Phone',
       value: '+91-82000-55645',
       href: 'tel:+918200055645',
+    },
+    {
+      icon: <FaWhatsapp className="text-[#25D366]" />,
+      label: 'WhatsApp',
+      value: '+91-82000-55645',
+      href: 'https://wa.me/918200055645',
     },
     {
       icon: <FaMapMarkerAlt className="text-emerald-400" />,

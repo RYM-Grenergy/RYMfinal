@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
   FaArrowRight,
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
+  FaWhatsapp,
 } from 'react-icons/fa';
 import leaderOne from '../../assets/images/YR.png';
 import leaderTwo from '../../assets/images/AryanSani.png';
@@ -45,6 +46,25 @@ const leaders = [
 const AboutPage = () => {
   const { isDark } = useTheme();
   const aboutImages = [topAboutImage, aboutImageOne, aboutImageTwo];
+
+  const [form, setForm] = useState({ name: '', phone: '', email: '' });
+  const [submitting, setSubmitting] = useState(false);
+
+  const handle = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+    
+    const text = `Hi RYM Grenergy,\n\nI am requesting information from the About page. Here are my details:\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}`;
+    const whatsappUrl = `https://wa.me/918200055645?text=${encodeURIComponent(text)}`;
+
+    setTimeout(() => {
+      window.open(whatsappUrl, '_blank');
+      setForm({ name: '', phone: '', email: '' });
+      setSubmitting(false);
+    }, 800);
+  };
 
   return (
     <div className="bg-black text-white">
@@ -226,32 +246,55 @@ const AboutPage = () => {
 
               <div className="space-y-4 text-zinc-300 text-sm">
                 <p className="flex items-center gap-3"><FaMapMarkerAlt className="text-emerald-400" /> Gurugram, NCR, India</p>
-                <p className="flex items-center gap-3"><FaPhoneAlt className="text-emerald-400" /> +91-82000-55645</p>
-                <p className="flex items-center gap-3"><FaEnvelope className="text-emerald-400" /> contact@rym-grenergy.com</p>
+                <p className="flex items-center gap-3">
+                  <FaPhoneAlt className="text-emerald-400" /> 
+                  <a href="tel:+918200055645" className="hover:text-emerald-400 transition-colors">+91-82000-55645</a>
+                </p>
+                <p className="flex items-center gap-3">
+                  <FaWhatsapp className="text-[#25D366]" /> 
+                  <a href="https://wa.me/918200055645" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">+91-82000-55645</a>
+                </p>
+                <p className="flex items-center gap-3">
+                  <FaEnvelope className="text-emerald-400" /> 
+                  <a href="mailto:contact@rym-grenergy.com" className="hover:text-emerald-400 transition-colors">contact@rym-grenergy.com</a>
+                </p>
               </div>
             </div>
 
-            <form className="bg-zinc-900/80 border border-white/10 p-6 md:p-8 space-y-4">
+            <form onSubmit={handleSubmit} className="bg-zinc-900/80 border border-white/10 p-6 md:p-8 space-y-4">
               <input
                 type="text"
+                name="name"
+                value={form.name}
+                onChange={handle}
+                required
                 placeholder="Name*"
                 className="w-full bg-white/90 text-black px-4 py-3 outline-none border border-transparent focus:border-emerald-400"
               />
               <input
                 type="tel"
+                name="phone"
+                value={form.phone}
+                onChange={handle}
+                required
                 placeholder="Phone Number*"
                 className="w-full bg-white/90 text-black px-4 py-3 outline-none border border-transparent focus:border-emerald-400"
               />
               <input
                 type="email"
+                name="email"
+                value={form.email}
+                onChange={handle}
+                required
                 placeholder="Email*"
                 className="w-full bg-white/90 text-black px-4 py-3 outline-none border border-transparent focus:border-emerald-400"
               />
               <button
                 type="submit"
-                className="w-full bg-emerald-400 text-black font-semibold py-3 hover:bg-emerald-300 transition-colors"
+                disabled={submitting}
+                className="w-full bg-emerald-400 text-black font-semibold py-3 hover:bg-emerald-300 transition-colors disabled:opacity-60 cursor-pointer"
               >
-                Submit
+                {submitting ? 'Submitting...' : 'Submit'}
               </button>
               <p className="text-xs text-zinc-500 leading-relaxed">
                 By clicking on &quot;Submit&quot; you are agreeing to our Privacy Policy and are allowing us (RYM Energy) and our service partners to get in touch with you.
