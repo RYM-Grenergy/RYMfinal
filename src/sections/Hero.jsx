@@ -94,7 +94,7 @@ const Hero = () => {
             <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[130px] mix-blend-screen pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none" />
 
-            <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24 lg:pb-32">
+            <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-36 sm:pt-44 lg:pt-52 pb-24 lg:pb-32">
                 <div className="max-w-4xl">
                     {/* Flex Container for Guaranteed Spacing */}
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', alignItems: 'flex-start' }}>

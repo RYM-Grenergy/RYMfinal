@@ -36,11 +36,11 @@ const leaders = [
     image: leaderThree,
   },
   {
-  name: 'Saurav Jain',
-  role: 'Director',
-  text: ' Business leader and entrepreneur with expertise in business strategy, sales, marketing, IT strategy, and business development. As Director at RYM Grenergy and Founder of VegaVruddhi Private Limited, he focuses on building scalable, innovation-driven ventures that create long-term impact.',
-  image: leaderFour,
-},
+    name: 'Saurabh Jain',
+    role: 'Director',
+    text: ' Business leader and entrepreneur with expertise in business strategy, sales, marketing, IT strategy, and business development. As Director at RYM Grenergy and Founder of VegaVruddhi Private Limited, he focuses on building scalable, innovation-driven ventures that create long-term impact.',
+    image: leaderFour,
+  },
 ];
 
 const AboutPage = () => {
@@ -55,7 +55,7 @@ const AboutPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitting(true);
-    
+
     const text = `Hi RYM Grenergy,\n\nI am requesting information from the About page. Here are my details:\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}`;
     const whatsappUrl = `https://wa.me/918200055645?text=${encodeURIComponent(text)}`;
 
@@ -193,11 +193,11 @@ const AboutPage = () => {
                 We specialize in AI-driven solutions, smart automation platforms, IoT-enabled hardware, and embedded systems. By combining artificial intelligence, edge computing, and smart hardware design, we create scalable solutions that solve real-world challenges across energy, infrastructure, mobility, and industrial domains.
 
                 Our goal is to develop efficient, resilient, and sustainable technologies that empower industries and contribute to a smarter, greener future.
-                
-                
-                
-                
-                
+
+
+
+
+
               </p>
             </div>
 
@@ -247,15 +247,15 @@ const AboutPage = () => {
               <div className="space-y-4 text-zinc-300 text-sm">
                 <p className="flex items-center gap-3"><FaMapMarkerAlt className="text-emerald-400" /> Gurugram, NCR, India</p>
                 <p className="flex items-center gap-3">
-                  <FaPhoneAlt className="text-emerald-400" /> 
+                  <FaPhoneAlt className="text-emerald-400" />
                   <a href="tel:+918200055645" className="hover:text-emerald-400 transition-colors">+91-82000-55645</a>
                 </p>
                 <p className="flex items-center gap-3">
-                  <FaWhatsapp className="text-[#25D366]" /> 
+                  <FaWhatsapp className="text-[#25D366]" />
                   <a href="https://wa.me/918200055645" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors">+91-82000-55645</a>
                 </p>
                 <p className="flex items-center gap-3">
-                  <FaEnvelope className="text-emerald-400" /> 
+                  <FaEnvelope className="text-emerald-400" />
                   <a href="mailto:contact@rym-grenergy.com" className="hover:text-emerald-400 transition-colors">contact@rym-grenergy.com</a>
                 </p>
               </div>
