@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowUpRight } from 'react-icons/fi';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { achievementsPageData } from '../../data/data';
 import journeyImage from '../../assets/images/image.png';
 import achievementNrl5thPrize from '../../assets/images/achievement_nrl_5th_prize.jpg';
 import achievementKpitGoldAward from '../../assets/images/achievement_kpit_gold_award.jpg';
+
+const ImageSlider = ({ images, title }) => {
+  const [current, setCurrent] = useState(0);
+  const prev = (e) => { e.stopPropagation(); setCurrent((c) => (c - 1 + images.length) % images.length); };
+  const next = (e) => { e.stopPropagation(); setCurrent((c) => (c + 1) % images.length); };
+  return (
+    <div className="relative h-full w-full">
+      <img src={images[current]} alt={title} className="h-full w-full object-cover" loading="lazy" />
+      <button onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-1 transition">
+        <FaChevronLeft size={12} />
+      </button>
+      <button onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white rounded-full p-1 transition">
+        <FaChevronRight size={12} />
+      </button>
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+        {images.map((_, i) => (
+          <div key={i} className={`h-1.5 w-1.5 rounded-full transition ${i === current ? 'bg-emerald-400' : 'bg-white/40'}`} />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const AchievementsPage = () => {
   const mediaCards = achievementsPageData.map((item, index) => ({
@@ -57,7 +79,10 @@ const AchievementsPage = () => {
               className="h-[420px] overflow-hidden rounded-xl border border-emerald-400/20 bg-[#111217] shadow-[0_20px_40px_rgba(0,0,0,0.35)] md:rounded-2xl"
             >
               <div className="mx-5 mt-5 h-52 overflow-hidden rounded-lg border border-black/40 bg-[#0f1117]">
-                <img src={item.image} alt={item.title} className="h-full w-full object-cover" loading="lazy" />
+                {item.images && item.images.length > 1
+                  ? <ImageSlider images={item.images} title={item.title} />
+                  : <img src={item.image} alt={item.title} className="h-full w-full object-cover" loading="lazy" />
+                }
               </div>
 
               <div className="flex h-[calc(100%-14.25rem)] flex-col space-y-2 p-5">

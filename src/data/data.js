@@ -9,6 +9,21 @@ import evIntegration from '../assets/images/EV-integration.jpg';
 import rezonixImage from '../assets/images/Renox.png';
 import cctvAttendanceImage from '../assets/images/CCTV.png';
 import intellexaImage from '../assets/images/Intelexa.png';
+import achievementGreenIndiaHackathon from '../assets/images/achievement_green_india_hackathon.jpg.jpeg';
+import achievementShardaHackathon from '../assets/images/achievement_sharda_hackathon.jpg.png';
+import achievementAnyeshana from '../assets/images/achievement_anyeshana.jpeg';
+import achievementHackKrmu from '../assets/images/achievement_hack_krmu.png';
+import achievementLeadConclave from '../assets/images/achievement_lead_conclave.png';
+import achievementGreatIndiaHackathon from '../assets/images/achievement_great_india_hackathon.png';
+import achievementInnospark from '../assets/images/achievement_innospark.png';
+import achievementKrExpo1 from '../assets/images/achievement_kr_expo_1.png';
+import achievementKrExpo2 from '../assets/images/achievement_kr_expo_2.png';
+import achievementKrExpo3 from '../assets/images/achievement_kr_expo_3.png';
+import achievementHardwar2 from '../assets/images/achievement_hardwar_2.png';
+import achievementHackaithon1 from '../assets/images/achievement_hackaithon_1.png';
+import achievementHackaithon2 from '../assets/images/achievement_hackaithon_2.png';
+import achievementHackaithon3 from '../assets/images/achievement_hackaithon_3.png';
+import achievementHackaithon4 from '../assets/images/achievement_hackaithon_4.png';
 import achievementNrl5thPrize from '../assets/images/achievement_nrl_5th_prize.jpg';
 import achievementNrlAwardCeremony from '../assets/images/achievement_nrl_award_ceremony.jpg';
 import achievementNrlGroupPhoto from '../assets/images/achievement_nrl_group_photo.jpg';
@@ -190,11 +205,76 @@ export const achievementsPageData = [
     image: productUltron
   },
   {
-    id: 12,
-    category: 'Innovation',
-    title: 'AI-powered inverters, and IOT automation devices',
-    description: 'Next-generation smart energy solutions',
-    image: evCharging
+    id: 13,
+    category: '3rd Prize',
+    title: 'Green India Hackathon - Manav Rachna University',
+    description: 'Secured 3rd position at the Green India Hackathon held on 3rd & 4th Feb 2023, winning ₹5,000 cash prize and ₹25,000 worth of shopping vouchers.',
+    image: achievementGreenIndiaHackathon
+  },
+  {
+    id: 14,
+    category: '1st Prize',
+    title: '5th Innovation Hackathon - Sharda University',
+    description: 'Secured 1st position at the 5th Innovation Hackathon held on 3rd & 4th Feb 2023, winning ₹25,000 cash prize and certificates.',
+    image: achievementShardaHackathon
+  },
+  {
+    id: 15,
+    category: '10th Position',
+    title: 'Anyeshana Competition',
+    description: 'Secured 10th position at the Anyeshana Competition held on 8th-10th Feb 2023, winning ₹5,000 cash prize and certificates.',
+    image: achievementAnyeshana
+  },
+  {
+    id: 16,
+    category: '1st Prize',
+    title: 'Hack KRMU - K.R. Mangalam University',
+    description: 'Won 1st position at Hack KRMU held on 15th-17th Feb 2023, winning ₹5,000 cash prize and certificates.',
+    image: achievementHackKrmu
+  },
+  {
+    id: 17,
+    category: '2nd Prize',
+    title: 'National Entrepreneurship Conclave - Lead Institute of Management',
+    description: 'Secured 2nd position at the National Entrepreneurship Conclave held on 8th-10th March 2023, winning ₹1,00,000 cash prize and ₹8,00,000 scholarship voucher.',
+    image: achievementLeadConclave
+  },
+  {
+    id: 18,
+    category: '1st Prize',
+    title: 'Great India Hackathon - Shri Group',
+    description: 'Won 1st position at the Great India Hackathon hosted by Shri Group on 22nd & 23rd April 2023, winning ₹75,000 cash prize and certificates.',
+    image: achievementGreatIndiaHackathon
+  },
+  {
+    id: 19,
+    category: 'Excellence Award',
+    title: 'Innospark Entrepreneurship Competition - G.D. Goenka University',
+    description: 'Won 1st position and the Excellence Award at Innospark held on 10th May 2023 at G.D. Goenka University, winning ₹10,000 cash prize and certificates.',
+    image: achievementInnospark
+  },
+  {
+    id: 20,
+    category: 'Co-Organizers',
+    title: 'KR Open Source Expo\'23 - K.R. Mangalam University',
+    description: 'Co-organized the KR Open Source Expo\'23 on 28th-29th Aug & 1st-2nd Sept 2023, in collaboration with Microsoft Azure, Quine Technologies & Reskilll. Prize: ₹15,000.',
+    image: achievementKrExpo1,
+    images: [achievementKrExpo1, achievementKrExpo2, achievementKrExpo3]
+  },
+  {
+    id: 23,
+    category: '1st Prize',
+    title: 'Hardwar 2.0 - Hardware Hackathon, UPES Dehradun',
+    description: 'Won 1st position at Hardwar 2.0 Hardware Hackathon on 2nd & 3rd Nov 2023 at UPES Dehradun, winning ₹1,00,000 cash prize, trophy, certificates and swags.',
+    image: achievementHardwar2
+  },
+  {
+    id: 24,
+    category: '1st Prize',
+    title: 'HackAIthon - SRIT Jabalpur',
+    description: 'Won 1st position at HackAIthon held on 16th-18th Sept 2023 at SRIT Jabalpur, winning ₹70,000 cash prize, certificates and swags. Two RYM teams secured top positions.',
+    image: achievementHackaithon1,
+    images: [achievementHackaithon1, achievementHackaithon2, achievementHackaithon3, achievementHackaithon4]
   }
 ];
 export const testimonialsData = [
