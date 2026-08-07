@@ -15,6 +15,7 @@ import TestimonialsPage from './pages/Testimonials/TestimonialsPage';
 import AchievementsPage from './pages/Achievements/AchievementsPage';
 import Privacy from './pages/Legal/Privacy';
 import Terms from './pages/Legal/Terms';
+import PartnersPage from './pages/Partners/PartnersPage';
 import { ThemeProvider } from './context/ThemeContext';
 
 const ScrollToTop = () => {
@@ -108,6 +109,7 @@ function App() {
                 <Route path="/careers" element={<CareersPage />} />
                 <Route path="/privacy-policy" element={<Privacy />} />
                 <Route path="/terms-of-service" element={<Terms />} />
+                <Route path="/partners" element={<PartnersPage />} />
               </Routes>
               <ScrollToTopButton />
             </main>

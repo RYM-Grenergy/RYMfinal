@@ -76,12 +76,6 @@ export const productsData = [
     image: evIntegration
   },
   {
-    id: 5,
-    name: 'REZONIX',
-    description: 'Intelligent Power, Wireless Future. REZONIX is a wireless energy platform built for modern connected environments. Key features include smart charging that dynamically adjusts transmission frequencies to maximize wireless energy efficiency, multi-device charging for simultaneous charging of smartphones and wearables, and smart home and retrofit compatibility for seamless integration into existing spaces without major infrastructure changes. Developed for Synchronous Build Digital Pvt. Ltd.',
-    image: rezonixImage
-  },
-  {
     id: 6,
     name: 'CCTV-Based Attendance',
     description: 'Live CCTV feed captures faces in real-time or from stored images, and AI performs face recognition to mark attendance automatically. Post-feed analysis improves scheduled-duration accuracy up to 98%. Tech stack includes IP cameras, a face-recognition AI model, video/image processing framework, and database with cloud storage. Best suited for high-foot-traffic areas such as building entrances and subway stations where reliable, low-touch attendance and monitoring are required.',

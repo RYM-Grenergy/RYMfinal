@@ -30,6 +30,7 @@ const Navbar = () => {
     { name: 'Products', to: '/products' },
     { name: 'Projects', to: '/projects' },
     { name: 'Achievements', to: '/achievements' },
+    { name: 'Partners', to: '/partners' },
     { name: 'Contact', to: '/contact' }
   ];
 
