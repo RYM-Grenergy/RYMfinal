@@ -101,7 +101,7 @@ const AboutPage = () => {
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.1, duration: 0.5 }}
                     >
-                      <div className="flex flex-row items-start gap-4 md:gap-5 mb-4">
+                      <div className="flex flex-row items-start gap-4 md:gap-5">
                         <motion.div
                           className="relative w-40 h-56 md:w-52 md:h-64 overflow-hidden group cursor-pointer bg-zinc-900 shrink-0 rounded-lg shadow-lg shadow-emerald-500/10 border border-emerald-500/20"
                           whileHover={{ scale: 1.03, y: -4 }}
@@ -114,21 +114,21 @@ const AboutPage = () => {
                           />
                           <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-emerald-500/90 via-emerald-500/50 to-transparent transition-all duration-500 group-hover:from-emerald-400/95 pointer-events-none"></div>
                         </motion.div>
-                        <div className="pt-2">
+                        <div className="pt-2 flex-1">
                           <h3 className="text-xl md:text-2xl font-medium text-white">{leader.name}</h3>
                           <div className="w-10 h-0.5 bg-emerald-400 my-2" />
-                          <p className="text-zinc-500 italic text-md">{leader.role}</p>
+                          <p className="text-zinc-400 italic text-md mb-3 font-semibold">{leader.role}</p>
+                          <motion.p
+                            className="text-xs md:text-sm text-zinc-400 italic leading-relaxed"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                          >
+                            {leader.text}
+                          </motion.p>
                         </div>
                       </div>
-                      <motion.div
-                        className="text-xs md:text-sm text-zinc-400 italic leading-relaxed"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                      >
-                        {leader.text}
-                      </motion.div>
                     </motion.article>
                   ))}
                 </div>
@@ -143,7 +143,7 @@ const AboutPage = () => {
                       viewport={{ once: true }}
                       transition={{ delay: (index + 2) * 0.1, duration: 0.5 }}
                     >
-                      <div className="flex flex-row items-start gap-4 md:gap-5 mb-4">
+                      <div className="flex flex-row items-start gap-4 md:gap-5">
                         <motion.div
                           className="relative w-40 h-56 md:w-52 md:h-64 overflow-hidden group cursor-pointer bg-zinc-900 shrink-0 rounded-lg shadow-lg shadow-emerald-500/10 border border-emerald-500/20"
                           whileHover={{ scale: 1.03, y: -4 }}
@@ -156,21 +156,21 @@ const AboutPage = () => {
                           />
                           <div className="absolute bottom-0 left-0 right-0 h-[50%] bg-gradient-to-t from-emerald-500/90 via-emerald-500/50 to-transparent transition-all duration-500 group-hover:from-emerald-400/95 pointer-events-none"></div>
                         </motion.div>
-                        <div className="pt-2">
+                        <div className="pt-2 flex-1">
                           <h3 className="text-xl md:text-2xl font-medium text-white">{leader.name}</h3>
                           <div className="w-10 h-0.5 bg-emerald-400 my-2" />
-                          <p className="text-zinc-500 italic text-md">{leader.role}</p>
+                          <p className="text-zinc-400 italic text-md mb-3 font-semibold">{leader.role}</p>
+                          <motion.p
+                            className="text-xs md:text-sm text-zinc-400 italic leading-relaxed"
+                            initial={{ opacity: 0 }}
+                            whileInView={{ opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 }}
+                          >
+                            {leader.text}
+                          </motion.p>
                         </div>
                       </div>
-                      <motion.div
-                        className="text-xs md:text-sm text-zinc-400 italic leading-relaxed"
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3 }}
-                      >
-                        {leader.text}
-                      </motion.div>
                     </motion.article>
                   ))}
                 </div>
