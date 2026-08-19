@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaArrowRight, FaCogs, FaGlobeEurope, FaProjectDiagram } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import aboutImage from '../assets/images/Section_Image.jpeg';
+import tidesLogo from '../assets/images/tides_iit_roorkee.png';
 
 const About = () => {
     const navigate = useNavigate();
@@ -180,6 +181,40 @@ const About = () => {
                         <p>
                             By combining strong design, engineering discipline, and scalable thinking, we create solutions that support growth across energy, infrastructure, mobility, and industrial domains.
                         </p>
+                    </motion.div>
+
+                    {/* TIDES IIT Roorkee Incubation Badge */}
+                    <motion.div
+                        className="mb-10 md:mb-14"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.45 }}
+                    >
+                        <div className="relative group">
+                            <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 via-teal-500/20 to-cyan-500/20 rounded-2xl blur-xl opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                            <div className="relative bg-gradient-to-br from-zinc-900/90 via-zinc-800/80 to-zinc-900/90 border border-emerald-500/30 rounded-2xl p-6 md:p-8 backdrop-blur-sm hover:border-emerald-400/60 transition-all duration-300">
+                                <div className="flex items-start gap-4">
+                                    <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 bg-white/95 rounded-xl flex items-center justify-center border border-emerald-500/30 p-2">
+                                        <img src={tidesLogo} alt="TIDES IIT Roorkee" className="w-full h-full object-contain" />
+                                    </div>
+                                    <div className="flex-1">
+                                        <span className="inline-block text-emerald-400 font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] mb-2 bg-emerald-500/10 px-3 py-1 rounded-full">Backed by Excellence</span>
+                                        <h4 className="text-white font-bold text-lg md:text-xl mb-3 leading-tight">Incubated & Supported by TIDES IIT Roorkee</h4>
+                                        <div className="flex flex-wrap gap-2 md:gap-3">
+                                            <span className="inline-flex items-center gap-1.5 text-xs text-emerald-300 bg-emerald-500/10 px-3 py-1.5 rounded-lg border border-emerald-500/20">
+                                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                                                DST-NIDHI PRAYAS Grant
+                                            </span>
+                                            <span className="inline-flex items-center gap-1.5 text-xs text-cyan-300 bg-cyan-500/10 px-3 py-1.5 rounded-lg border border-cyan-500/20">
+                                                <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                                                DPIIT Recognized
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </motion.div>
 
                     <motion.button

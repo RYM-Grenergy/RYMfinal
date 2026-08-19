@@ -14,6 +14,7 @@ import leaderFour from '../../assets/images/Saurav.jpeg';
 import topAboutImage from '../../assets/images/Section_Image.jpeg';
 import aboutImageOne from '../../assets/images/achievement_kpit_gold_award.jpg';
 import aboutImageTwo from '../../assets/images/achievement_nrl_group_photo.jpg';
+import tidesLogo from '../../assets/images/tides_iit_roorkee.png';
 import { useTheme } from '../../context/ThemeContext';
 
 const leaders = [
@@ -193,12 +194,38 @@ const AboutPage = () => {
                 We specialize in AI-driven solutions, smart automation platforms, IoT-enabled hardware, and embedded systems. By combining artificial intelligence, edge computing, and smart hardware design, we create scalable solutions that solve real-world challenges across energy, infrastructure, mobility, and industrial domains.
 
                 Our goal is to develop efficient, resilient, and sustainable technologies that empower industries and contribute to a smarter, greener future.
-
-
-
-
-
               </p>
+
+              {/* TIDES IIT Roorkee Recognition */}
+              <div className="mt-8">
+                <div className="relative group max-w-2xl">
+                  <div className="absolute -inset-1 bg-gradient-to-r from-emerald-500/20 via-teal-500/20 to-cyan-500/20 rounded-2xl blur-lg opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                  <div className="relative bg-gradient-to-br from-zinc-900/90 via-zinc-800/80 to-zinc-900/90 border border-emerald-500/30 rounded-2xl p-6 backdrop-blur-sm hover:border-emerald-400/60 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-16 h-16 bg-white/95 rounded-xl flex items-center justify-center border border-emerald-500/30 p-2">
+                        <img src={tidesLogo} alt="TIDES IIT Roorkee" className="w-full h-full object-contain" />
+                      </div>
+                      <div className="flex-1">
+                        <span className="inline-block text-emerald-400 font-bold text-[10px] uppercase tracking-[0.2em] mb-2 bg-emerald-500/10 px-3 py-1 rounded-full">Backed by Excellence</span>
+                        <h4 className="text-white font-bold text-xl mb-3 leading-tight">Incubated & Supported by TIDES IIT Roorkee</h4>
+                        <div className="flex flex-wrap gap-2 mb-3">
+                          <span className="inline-flex items-center gap-1.5 text-xs text-emerald-300 bg-emerald-500/10 px-3 py-1.5 rounded-lg border border-emerald-500/20">
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                            DST-NIDHI PRAYAS Grant
+                          </span>
+                          <span className="inline-flex items-center gap-1.5 text-xs text-cyan-300 bg-cyan-500/10 px-3 py-1.5 rounded-lg border border-cyan-500/20">
+                            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                            DPIIT Recognized
+                          </span>
+                        </div>
+                        <p className="text-zinc-400 text-sm leading-relaxed">
+                          Proudly incubated by TIDES (Technology Innovation and Development of Entrepreneurship Society), the premier business incubator at IIT Roorkee. As a recipient of the prestigious DST-NIDHI PRAYAS Grant and DPIIT-recognized startup, we are backed by India's leading technical institution and government support programs, enabling us to deliver world-class innovation in energy and intelligent systems.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5">
