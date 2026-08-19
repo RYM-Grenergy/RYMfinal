@@ -9,6 +9,10 @@ import evIntegration from '../assets/images/EV-integration.jpg';
 import rezonixImage from '../assets/images/Renox.png';
 import cctvAttendanceImage from '../assets/images/CCTV.png';
 import intellexaImage from '../assets/images/Intelexa.png';
+import productDivyadrishtiAi from '../assets/images/product_divyadrishti_ai.png';
+import productNexoraOne from '../assets/images/product_nexora_one.png';
+import productHaierQc from '../assets/images/product_haier_qc.png';
+import productVyaraTiles from '../assets/images/product_vyara_tiles.png';
 import achievementGreenIndiaHackathon from '../assets/images/achievement_green_india_hackathon.jpg.jpeg';
 import achievementShardaHackathon from '../assets/images/achievement_sharda_hackathon.jpg.png';
 import achievementAnyeshana from '../assets/images/achievement_anyeshana.jpeg';
@@ -80,6 +84,30 @@ export const productsData = [
     name: 'CCTV-Based Attendance',
     description: 'Live CCTV feed captures faces in real-time or from stored images, and AI performs face recognition to mark attendance automatically. Post-feed analysis improves scheduled-duration accuracy up to 98%. Tech stack includes IP cameras, a face-recognition AI model, video/image processing framework, and database with cloud storage. Best suited for high-foot-traffic areas such as building entrances and subway stations where reliable, low-touch attendance and monitoring are required.',
     image: cctvAttendanceImage
+  },
+  {
+    id: 8,
+    name: 'DIVYADRISHTI AI - 360°',
+    description: 'Next-generation intelligent surveillance platform delivering real-time detection, monitoring and analytics for complete safety and operational efficiency across industries. Features include PPE Kits Detection, Safety Kits Detection, Crowd Management, Bulk Attendance (Facial Recognition), Zone Violation Detection, Mineral Identification, CV Quality Check, Number Plate Recognition, Weighbridge AI Analytics, Video Tampering Detection, and comprehensive Reports & Dashboards. Implemented with Jhaskcom Pvt. Ltd., Vegavruddhi, GD Goenka University, and BWorth. Under implementation with 3 MNCs.',
+    image: productDivyadrishtiAi
+  },
+  {
+    id: 9,
+    name: 'NEXORA ONE',
+    description: 'AI-Powered Unified Business Operating System - One Platform. Every Operation. Intelligent Growth. Nexora One unifies CRM, HRM, ERP and more into a single intelligent platform to streamline operations, boost productivity and drive measurable growth across your organization. Features include Unified CRM/HRM/ERP, AI Sales & Lead Management, Phonebound AI Call Handling, HR & Payroll Automation, Inventory/Procurement & Cataloging, E-Commerce & Sales Management, Advanced Dashboards, AI Alerts & Notifications, Invoicing & Reports, and enterprise-grade security with scalability. Trusted by Jhaskcom, Leymens, Bella Moda, Khanna\'s Surplus, Sovra, ClosetRush, and BoxFox.',
+    image: productNexoraOne
+  },
+  {
+    id: 10,
+    name: 'Computer Vision Quality Check - Haier',
+    description: 'AI-powered vision system for real-time final inspection of refrigerators on production line ensuring zero-defect outgoing quality. Implementing with Haier. Inspection capabilities include Design & Build Evaluation, Deformation Detection, Panel & Handle Inspection, Sticker & Written Info Verification, Edge Line Finishing Check, and Color & Design Deviation Analysis. Achieves ultra-fast processing of less than 8 seconds per refrigerator, 99.5%+ detection accuracy, 100% in-line inspection, and zero-defect quality assurance with seamless line integration.',
+    image: productHaierQc
+  },
+  {
+    id: 11,
+    name: 'AI Solutions for Vyara Tiles Limited',
+    description: 'Driving Quality Excellence & Intelligent Operations Across Plants. Implementation in progress with two comprehensive solutions: (1) AI-Powered Production Quality Check & Analysis for Production Line Manager - Real-time AI monitoring and testing from raw material mixing to compression press, ensuring every batch meets ideal quality standards with vision testing, weighing, moisture sensors, and AI recommendation engine. (2) AI Intelligence Layer for Data, Documentation & Invoicing Management - Centralized AI-powered platform to manage data, documentation, invoicing, and analytics across all factories & offices with role-based access control.',
+    image: productVyaraTiles
   }
 ];
 export const achievementsData = [

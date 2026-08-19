@@ -8,6 +8,18 @@ import seemeeLogo from '../../assets/images/partner_seemee.png';
 import sovraLogo from '../../assets/images/partner_sovra.png';
 import bworthLogo from '../../assets/images/partner_bworth.png';
 import closetrushLogo from '../../assets/images/partner_closetrush.png';
+import iitRoorkeeLogo from '../../assets/images/partner_iit_roorkee.png';
+import inventisLabsLogo from '../../assets/images/partner_inventis_labs.png';
+import jswLogo from '../../assets/images/partner_jsw.png';
+import leymenLogo from '../../assets/images/partner_leymen.png';
+import bmLogo from '../../assets/images/partner_bm.png';
+import khannasSupremeLogo from '../../assets/images/partner_khannas_supreme.png';
+import shreeCementLogo from '../../assets/images/partner_shree_cement.png';
+import rkMarbleLogo from '../../assets/images/partner_rk_marble.png';
+import jkCementLogo from '../../assets/images/partner_jk_cement.png';
+import golchaAssociatedLogo from '../../assets/images/partner_golcha_associated.png';
+import gkmLogo from '../../assets/images/partner_gkm.png';
+import aclLogo from '../../assets/images/partner_acl.png';
 
 const partnersData = [
   {
@@ -65,6 +77,102 @@ const partnersData = [
     description: 'A subscription-based linen rental service delivering cleaned and sanitized bedsheets to households, working professionals, students, and hospitality businesses across India.',
     website: '#',
     category: 'Lifestyle Partner'
+  },
+  {
+    id: 8,
+    name: 'IIT Roorkee',
+    logo: iitRoorkeeLogo,
+    description: 'A premier technical institution in India. RYM Grenergy is proud to be supported by TIDES IIT Roorkee and has received the prestigious DST-NIDHI PRAYAS Grant, fostering innovation and research excellence.',
+    website: 'https://www.iitr.ac.in',
+    category: 'Academic Partner'
+  },
+  {
+    id: 9,
+    name: 'Inventis Labs',
+    logo: inventisLabsLogo,
+    description: 'An innovation and technology partner specializing in IoT solutions, smart automation, and advanced electronics. Collaborating with RYM Grenergy to develop cutting-edge intelligent systems for energy management and industrial applications.',
+    website: '#',
+    category: 'Technology Partner'
+  },
+  {
+    id: 10,
+    name: 'JSW Group',
+    logo: jswLogo,
+    description: 'One of India\'s leading conglomerates with diverse business interests spanning steel, energy, infrastructure, cement, and more. Partnering with RYM Grenergy to drive innovation in sustainable energy solutions and industrial automation.',
+    website: 'https://www.jsw.in',
+    category: 'Industry Partner'
+  },
+  {
+    id: 11,
+    name: 'Leymen',
+    logo: leymenLogo,
+    description: 'A strategic partner specializing in electronics manufacturing and advanced technology solutions. Collaborating with RYM Grenergy to develop innovative electronic systems and components for smart energy applications.',
+    website: '#',
+    category: 'Manufacturing Partner'
+  },
+  {
+    id: 12,
+    name: 'BM',
+    logo: bmLogo,
+    description: 'A premium lifestyle and fashion partner collaborating with RYM Grenergy to integrate smart technology and innovation into modern lifestyle solutions.',
+    website: '#',
+    category: 'Lifestyle Partner'
+  },
+  {
+    id: 13,
+    name: 'Khanna\'s Supreme',
+    logo: khannasSupremeLogo,
+    description: 'A distinguished partner specializing in premium products and services. Collaborating with RYM Grenergy to deliver excellence and innovation across multiple domains.',
+    website: '#',
+    category: 'Business Partner'
+  },
+  {
+    id: 14,
+    name: 'Shree Cement',
+    logo: shreeCementLogo,
+    description: 'One of India\'s leading cement manufacturers with a strong focus on sustainability and innovation. Partnering with RYM Grenergy to integrate smart energy solutions and automation technologies in industrial operations.',
+    website: 'https://www.shreecement.com',
+    category: 'Industry Partner'
+  },
+  {
+    id: 15,
+    name: 'RK Marble',
+    logo: rkMarbleLogo,
+    description: 'Khoobsurat Imaandaari - A trusted name in marble and stone solutions, delivering quality products with integrity. Partnering with RYM Grenergy to bring innovation and technology to the marble industry.',
+    website: '#',
+    category: 'Industry Partner'
+  },
+  {
+    id: 16,
+    name: 'JK Cement',
+    logo: jkCementLogo,
+    description: 'A leading cement manufacturer in India committed to quality, sustainability, and innovation. Partnering with RYM Grenergy to implement smart energy management and automation solutions for sustainable industrial operations.',
+    website: 'https://www.jkcement.com',
+    category: 'Industry Partner'
+  },
+  {
+    id: 17,
+    name: 'Golcha Associated',
+    logo: golchaAssociatedLogo,
+    description: 'A prominent business group with diverse interests across minerals, construction materials, and industrial products. Collaborating with RYM Grenergy to integrate innovative energy solutions and smart automation technologies.',
+    website: '#',
+    category: 'Industry Partner'
+  },
+  {
+    id: 18,
+    name: 'GKM',
+    logo: gkmLogo,
+    description: 'Enlightening the World - A trusted client partnering with RYM Grenergy on innovative energy solutions and smart technology implementations to create a brighter, more sustainable future.',
+    website: '#',
+    category: 'Client Partner'
+  },
+  {
+    id: 19,
+    name: 'ACL',
+    logo: aclLogo,
+    description: 'A strategic partner collaborating with RYM Grenergy to deliver innovative solutions and drive excellence across industrial and technology domains.',
+    website: '#',
+    category: 'Industry Partner'
   }
 ];
 
