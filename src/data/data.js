@@ -96,18 +96,6 @@ export const productsData = [
     name: 'NEXORA ONE',
     description: 'AI-Powered Unified Business Operating System - One Platform. Every Operation. Intelligent Growth. Nexora One unifies CRM, HRM, ERP and more into a single intelligent platform to streamline operations, boost productivity and drive measurable growth across your organization. Features include Unified CRM/HRM/ERP, AI Sales & Lead Management, Phonebound AI Call Handling, HR & Payroll Automation, Inventory/Procurement & Cataloging, E-Commerce & Sales Management, Advanced Dashboards, AI Alerts & Notifications, Invoicing & Reports, and enterprise-grade security with scalability. Trusted by Jhaskcom, Leymens, Bella Moda, Khanna\'s Surplus, Sovra, ClosetRush, and BoxFox.',
     image: productNexoraOne
-  },
-  {
-    id: 10,
-    name: 'Computer Vision Quality Check - Haier',
-    description: 'AI-powered vision system for real-time final inspection of refrigerators on production line ensuring zero-defect outgoing quality. Implementing with Haier. Inspection capabilities include Design & Build Evaluation, Deformation Detection, Panel & Handle Inspection, Sticker & Written Info Verification, Edge Line Finishing Check, and Color & Design Deviation Analysis. Achieves ultra-fast processing of less than 8 seconds per refrigerator, 99.5%+ detection accuracy, 100% in-line inspection, and zero-defect quality assurance with seamless line integration.',
-    image: productHaierQc
-  },
-  {
-    id: 11,
-    name: 'AI Solutions for Vyara Tiles Limited',
-    description: 'Driving Quality Excellence & Intelligent Operations Across Plants. Implementation in progress with two comprehensive solutions: (1) AI-Powered Production Quality Check & Analysis for Production Line Manager - Real-time AI monitoring and testing from raw material mixing to compression press, ensuring every batch meets ideal quality standards with vision testing, weighing, moisture sensors, and AI recommendation engine. (2) AI Intelligence Layer for Data, Documentation & Invoicing Management - Centralized AI-powered platform to manage data, documentation, invoicing, and analytics across all factories & offices with role-based access control.',
-    image: productVyaraTiles
   }
 ];
 export const achievementsData = [
