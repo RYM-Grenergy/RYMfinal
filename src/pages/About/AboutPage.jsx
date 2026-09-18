@@ -7,14 +7,14 @@ import {
   FaEnvelope,
   FaWhatsapp,
 } from 'react-icons/fa';
-import leaderOne from '../../assets/images/YR.png';
-import leaderTwo from '../../assets/images/AryanSani.png';
-import leaderThree from '../../assets/images/image copy.jpeg';
-import leaderFour from '../../assets/images/Saurav.jpeg';
-import topAboutImage from '../../assets/images/Section_Image.jpeg';
-import aboutImageOne from '../../assets/images/achievement_kpit_gold_award.jpg';
-import aboutImageTwo from '../../assets/images/achievement_nrl_group_photo.jpg';
-import tidesLogo from '../../assets/images/tides_iit_roorkee.png';
+const leaderOne = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789727182/rym_website/YR.png';
+const leaderTwo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726278/rym_website/AryanSani.png';
+const leaderThree = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726314/rym_website/image_copy.jpg';
+const leaderFour = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726388/rym_website/Saurav.jpg';
+const topAboutImage = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726922/rym_website/Section_Image.jpg';
+const aboutImageOne = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726555/rym_website/achievement_kpit_gold_award.jpg';
+const aboutImageTwo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726233/rym_website/achievement_nrl_group_photo.jpg';
+const tidesLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789727049/rym_website/tides_iit_roorkee.jpg';
 import { useTheme } from '../../context/ThemeContext';
 
 const leaders = [
@@ -288,43 +288,55 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit} className="bg-zinc-900/80 border border-white/10 p-6 md:p-8 space-y-4">
-              <input
-                type="text"
-                name="name"
-                value={form.name}
-                onChange={handle}
-                required
-                placeholder="Name*"
-                className="w-full bg-white/90 text-black px-4 py-3 outline-none border border-transparent focus:border-emerald-400"
-              />
-              <input
-                type="tel"
-                name="phone"
-                value={form.phone}
-                onChange={handle}
-                required
-                placeholder="Phone Number*"
-                className="w-full bg-white/90 text-black px-4 py-3 outline-none border border-transparent focus:border-emerald-400"
-              />
-              <input
-                type="email"
-                name="email"
-                value={form.email}
-                onChange={handle}
-                required
-                placeholder="Email*"
-                className="w-full bg-white/90 text-black px-4 py-3 outline-none border border-transparent focus:border-emerald-400"
-              />
+            <form onSubmit={handleSubmit} className="bg-zinc-900/90 border border-white/10 p-6 md:p-8 space-y-4 rounded-2xl shadow-xl">
+              <div>
+                <label htmlFor="about-name" className="sr-only">Your Full Name</label>
+                <input
+                  id="about-name"
+                  type="text"
+                  name="name"
+                  value={form.name}
+                  onChange={handle}
+                  required
+                  placeholder="Your Full Name*"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-base text-white placeholder-zinc-400 outline-none transition-all focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400"
+                />
+              </div>
+              <div>
+                <label htmlFor="about-phone" className="sr-only">Your Phone Number</label>
+                <input
+                  id="about-phone"
+                  type="tel"
+                  name="phone"
+                  value={form.phone}
+                  onChange={handle}
+                  required
+                  placeholder="Your Phone Number*"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-base text-white placeholder-zinc-400 outline-none transition-all focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400"
+                />
+              </div>
+              <div>
+                <label htmlFor="about-email" className="sr-only">Your Email Address</label>
+                <input
+                  id="about-email"
+                  type="email"
+                  name="email"
+                  value={form.email}
+                  onChange={handle}
+                  required
+                  placeholder="Your Email Address*"
+                  className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-base text-white placeholder-zinc-400 outline-none transition-all focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400"
+                />
+              </div>
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-emerald-400 text-black font-semibold py-3 hover:bg-emerald-300 transition-colors disabled:opacity-60 cursor-pointer"
+                className="w-full bg-gradient-to-r from-emerald-400 to-teal-400 text-black font-semibold py-3.5 rounded-xl hover:from-emerald-300 hover:to-teal-300 transition-all disabled:opacity-60 cursor-pointer active:scale-98 shadow-md"
               >
                 {submitting ? 'Submitting...' : 'Submit'}
               </button>
-              <p className="text-xs text-zinc-500 leading-relaxed">
-                By clicking on &quot;Submit&quot; you are agreeing to our Privacy Policy and are allowing us (RYM Energy) and our service partners to get in touch with you.
+              <p className="text-xs text-zinc-400 leading-relaxed">
+                By clicking on &quot;Submit&quot; you are agreeing to our Privacy Policy and allowing RYM Grenergy and our service partners to get in touch with you.
               </p>
             </form>
           </div>

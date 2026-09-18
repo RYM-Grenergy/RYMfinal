@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
 import { testimonialsData } from '../../data/data';
-import ctaVisual from '../../assets/images/image.png';
+const ctaVisual = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726330/rym_website/image.png';
 
 const TestimonialsPage = () => {
   return (

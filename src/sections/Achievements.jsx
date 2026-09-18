@@ -30,7 +30,7 @@ const Achievements = () => {
     const otherAchievements = achievementsData.slice(1);
 
     return (
-        <section className="relative overflow-hidden py-[50px] md:py-[100px] bg-[#0a0a0a]" id="achievements">
+        <section className="relative overflow-hidden py-8 md:py-12 bg-[#0a0a0a]" id="achievements">
             <div className="container mx-auto px-4 md:px-6 max-w-[1400px]">
                 <motion.div
                     className="text-center"
@@ -44,7 +44,7 @@ const Achievements = () => {
                     </h2>
                 </motion.div>
 
-                <div className="mt-[40px] md:mt-[60px]">
+                <div className="mt-6 md:mt-8">
                     {/* Featured Achievement - Large Card */}
                     <motion.div
                         className="relative grid grid-cols-1 md:grid-cols-2 gap-0 bg-[#111111] border border-[#222222] rounded-[16px] md:rounded-[24px] overflow-hidden mb-[30px] md:mb-[40px] md:min-h-[500px] group"
@@ -57,7 +57,7 @@ const Achievements = () => {
                             <img src={featuredAchievement.image} alt={featuredAchievement.title} className="w-full h-full object-cover block transition-transform duration-[600ms] group-hover:scale-105" />
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/60 pointer-events-none"></div>
                         </div>
-                        <div className="flex flex-col justify-center p-[30px_24px] md:p-[40px_32px] lg:p-[60px] gap-4 md:gap-5">
+                        <div className="flex flex-col justify-center p-6 sm:p-8 lg:p-12 gap-4 md:gap-5">
                             <span className="inline-block px-3.5 md:px-4 py-1.5 bg-[#00ff88]/10 border border-[#00ff88]/30 rounded-full text-[#10b981] text-[0.8rem] md:text-[0.85rem] font-semibold uppercase tracking-[1px] w-fit">{featuredAchievement.category}</span>
                             <h3 className="text-[clamp(1.25rem,5vw,1.75rem)] lg:text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.2] m-0 text-white font-bold font-heading">{featuredAchievement.title}</h3>
                             <p className="text-[clamp(0.85rem,3vw,1rem)] lg:text-[clamp(1rem,2vw,1.1rem)] leading-[1.7] md:leading-[1.8] text-[#e0e0e0] m-0">{featuredAchievement.description}</p>

@@ -44,11 +44,11 @@ const Features = () => {
     };
 
     return (
-        <section className="relative overflow-hidden pt-[20px] pb-12.5 md:pt-[40px] md:pb-[100px] bg-[#0a0a0a]" id="features">
+        <section className="relative overflow-hidden py-8 md:py-12 bg-[#0a0a0a]" id="features">
             <div className="container mx-auto px-4 md:px-6 max-w-[1400px]">
                 {/* Section Header */}
                 <motion.div
-                    className="text-center mb-[50px] md:mb-20"
+                    className="text-center mb-6 md:mb-10"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -73,7 +73,7 @@ const Features = () => {
                     {features.map((feature) => (
                         <motion.div
                             key={feature.id}
-                            className="group relative bg-[#111111] border border-[#222222] rounded-[20px] p-8 md:p-10 flex flex-col items-start transition-all duration-300 hover:border-[#10b981] hover:shadow-[0_20px_40px_rgba(16,185,129,0.1)] hover:-translate-y-2"
+                            className="group relative bg-[#111111] border border-[#222222] rounded-[20px] p-6 sm:p-8 md:p-10 flex flex-col items-start transition-all duration-300 hover:border-[#10b981] hover:shadow-[0_20px_40px_rgba(16,185,129,0.1)] hover:-translate-y-2 active:scale-[0.98]"
                             variants={cardVariants}
                         >
                             {/* Icon Background */}

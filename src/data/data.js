@@ -1,54 +1,61 @@
-import productUltron from '../assets/Ultron.png';
-import productAiDrive from '../assets/images/Weighbridge_AI.png';
-import productReews from '../assets/images/product.png';
-import achievementImage from '../assets/images/Achievement_Image.png';
-import journeyImage from '../assets/images/image.png';
-import productGeneral1 from '../assets/images/product.jpeg';
-import evCharging from '../assets/images/EV_Charging.jpeg';
-import evIntegration from '../assets/images/EV-integration.jpg';
-import rezonixImage from '../assets/images/Renox.png';
-import cctvAttendanceImage from '../assets/images/CCTV.png';
-import intellexaImage from '../assets/images/Intelexa.png';
-import productDivyadrishtiAi from '../assets/images/product_divyadrishti_ai.png';
-import productNexoraOne from '../assets/images/product_nexora_one.png';
-import productHaierQc from '../assets/images/product_haier_qc.png';
-import productVyaraTiles from '../assets/images/product_vyara_tiles.png';
-import achievementGreenIndiaHackathon from '../assets/images/achievement_green_india_hackathon.jpg.jpeg';
-import achievementShardaHackathon from '../assets/images/achievement_sharda_hackathon.jpg.png';
-import achievementAnyeshana from '../assets/images/achievement_anyeshana.jpeg';
-import achievementHackKrmu from '../assets/images/achievement_hack_krmu.png';
-import achievementLeadConclave from '../assets/images/achievement_lead_conclave.png';
-import achievementGreatIndiaHackathon from '../assets/images/achievement_great_india_hackathon.png';
-import achievementInnospark from '../assets/images/achievement_innospark.png';
-import achievementKrExpo1 from '../assets/images/achievement_kr_expo_1.png';
-import achievementKrExpo2 from '../assets/images/achievement_kr_expo_2.png';
-import achievementKrExpo3 from '../assets/images/achievement_kr_expo_3.png';
-import achievementHardwar2 from '../assets/images/achievement_hardwar_2.png';
-import achievementHackaithon1 from '../assets/images/achievement_hackaithon_1.png';
-import achievementHackaithon2 from '../assets/images/achievement_hackaithon_2.png';
-import achievementHackaithon3 from '../assets/images/achievement_hackaithon_3.png';
-import achievementHackaithon4 from '../assets/images/achievement_hackaithon_4.png';
-import achievementNrl5thPrize from '../assets/images/achievement_nrl_5th_prize.jpg';
-import achievementNrlAwardCeremony from '../assets/images/achievement_nrl_award_ceremony.jpg';
-import achievementNrlGroupPhoto from '../assets/images/achievement_nrl_group_photo.jpg';
-import achievementParulHackverse from '../assets/images/achievement_parul_hackverse.jpg';
-import achievementLeadThirdPrize from '../assets/images/achievement_lead_3rd_prize.jpg';
-import achievementKpitGoldAward from '../assets/images/achievement_kpit_gold_award.jpg';
-import achievementIitRoorkeeGrant from '../assets/images/achievement_iit_roorkee_grant.jpg';
-import testimonial1 from '../assets/images/testimonials.jpeg';
-import testimonial2 from '../assets/images/testimonials.jpg';
-import testimonial3 from '../assets/images/testimonials (1).jpg';
-import testimonial4 from '../assets/images/testimonials (2).jpg';
-import testimonial5 from '../assets/images/testimonials (1).jpeg';
-import testimonial6 from '../assets/images/testimonials.png';
-import logo from '../assets/images/Logo.png';
-import sdg1 from '../assets/images/sdg.png';
-import sdg2 from '../assets/images/sdg (1).png';
-import sdg3 from '../assets/images/sdg (2).png';
-import sdg4 from '../assets/images/sdg (3).png';
-import sdg5 from '../assets/images/sdg (4).png';
+const productUltron = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725820/rym_website/Ultron.png';
+const productAiDrive = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789727178/rym_website/Weighbridge_AI.png';
+const productReews = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726888/rym_website/product.png';
+const achievementImage = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725923/rym_website/Achievement_Image.png';
+const journeyImage = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726330/rym_website/image.png';
+const productGeneral1 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726877/rym_website/product.jpg';
+const evCharging = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726309/rym_website/EV_Charging.jpg';
+const evIntegration = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726300/rym_website/EV-integration.jpg';
+const rezonixImage = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726386/rym_website/Renox.png';
+const cctvAttendanceImage = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726291/rym_website/CCTV.png';
+const intellexaImage = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726333/rym_website/Intelexa.png';
+const productDivyadrishtiAi = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726378/rym_website/product_divyadrishti_ai.jpg';
+const productNexoraOne = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726380/rym_website/product_nexora_one.jpg';
+const productHaierQc = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726379/rym_website/product_haier_qc.jpg';
+const productVyaraTiles = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726381/rym_website/product_vyara_tiles.jpg';
+const achievementGreenIndiaHackathon = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725813/rym_website/achievement_green_india_hackathon_jpg.jpg';
+const achievementShardaHackathon = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726262/rym_website/achievement_sharda_hackathon_jpg.jpg';
+const achievementAnyeshana = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725825/rym_website/achievement_anyeshana.jpg';
+const achievementHackKrmu = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725836/rym_website/achievement_hack_krmu.jpg';
+const achievementLeadConclave = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726026/rym_website/achievement_lead_conclave.jpg';
+const achievementGreatIndiaHackathon = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725826/rym_website/achievement_great_india_hackathon.jpg';
+const achievementInnospark = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725926/rym_website/achievement_innospark.jpg';
+const achievementKrExpo1 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726020/rym_website/achievement_kr_expo_1.jpg';
+const achievementKrExpo2 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726021/rym_website/achievement_kr_expo_2.jpg';
+const achievementKrExpo3 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726023/rym_website/achievement_kr_expo_3.jpg';
+const achievementHardwar2 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725837/rym_website/achievement_hardwar_2.jpg';
+const achievementHackaithon1 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725829/rym_website/achievement_hackaithon_1.jpg';
+const achievementHackaithon2 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725830/rym_website/achievement_hackaithon_2.jpg';
+const achievementHackaithon3 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725832/rym_website/achievement_hackaithon_3.jpg';
+const achievementHackaithon4 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725834/rym_website/achievement_hackaithon_4.jpg';
+const achievementNrl5thPrize = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726567/rym_website/achievement_nrl_5th_prize.jpg';
+const achievementNrlAwardCeremony = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726581/rym_website/achievement_nrl_award_ceremony.jpg';
+const achievementNrlGroupPhoto = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726233/rym_website/achievement_nrl_group_photo.jpg';
+const achievementParulHackverse = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726261/rym_website/achievement_parul_hackverse.jpg';
+const achievementLeadThirdPrize = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726025/rym_website/achievement_lead_3rd_prize.jpg';
+const achievementKpitGoldAward = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726555/rym_website/achievement_kpit_gold_award.jpg';
+const achievementIitRoorkeeGrant = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725881/rym_website/achievement_iit_roorkee_grant.png';
+const testimonial1 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789727013/rym_website/testimonials.jpg';
+const testimonial2 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789727027/rym_website/testimonials.jpg';
+const testimonial3 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726927/rym_website/testimonials__1_.jpg';
+const testimonial4 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726936/rym_website/testimonials__2_.jpg';
+const testimonial5 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726925/rym_website/testimonials__1_.jpg';
+const testimonial6 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789727032/rym_website/testimonials.png';
+const logo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726337/rym_website/Logo.png';
+const productDivyaDrishti360 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726298/rym_website/DivyaDhistri.png';
+const sdg1 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726392/rym_website/sdg.png';
+const sdg2 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726389/rym_website/sdg__1_.png';
+const sdg3 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726390/rym_website/sdg__2_.png';
+const sdg4 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726390/rym_website/sdg__3_.png';
+const sdg5 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726392/rym_website/sdg__4_.png';
 
 export const productsData = [
+  {
+    id: 8,
+    name: 'Divya-Drishti AI 360°',
+    description: 'Divya-Drishti AI 360° is a unified AI platform for intelligent business operations. It connects business data, systems, people, and operations in one platform, transforming fragmented data into actionable intelligence. Combining AI, machine learning, and computer vision capabilities, it supports intelligent document processing and knowledge management while enabling real-time monitoring, analytics, and smart alerts. Divya-Drishti AI 360° integrates seamlessly with existing ERP, CRM, IoT, and operational systems. Its modular architecture allows businesses to choose the solutions they need and scale across functions and locations, empowering organizations to make smarter, data-driven decisions.',
+    image: productDivyaDrishti360
+  },
   {
     id: 7,
     name: 'INTELLEXA AI',
@@ -84,12 +91,6 @@ export const productsData = [
     name: 'CCTV-Based Attendance',
     description: 'Live CCTV feed captures faces in real-time or from stored images, and AI performs face recognition to mark attendance automatically. Post-feed analysis improves scheduled-duration accuracy up to 98%. Tech stack includes IP cameras, a face-recognition AI model, video/image processing framework, and database with cloud storage. Best suited for high-foot-traffic areas such as building entrances and subway stations where reliable, low-touch attendance and monitoring are required.',
     image: cctvAttendanceImage
-  },
-  {
-    id: 8,
-    name: 'DIVYADRISHTI AI - 360°',
-    description: 'Next-generation intelligent surveillance platform delivering real-time detection, monitoring and analytics for complete safety and operational efficiency across industries. Features include PPE Kits Detection, Safety Kits Detection, Crowd Management, Bulk Attendance (Facial Recognition), Zone Violation Detection, Mineral Identification, CV Quality Check, Number Plate Recognition, Weighbridge AI Analytics, Video Tampering Detection, and comprehensive Reports & Dashboards. Implemented with Jhaskcom Pvt. Ltd., Vegavruddhi, GD Goenka University, and BWorth. Under implementation with 3 MNCs.',
-    image: productDivyadrishtiAi
   },
   {
     id: 9,

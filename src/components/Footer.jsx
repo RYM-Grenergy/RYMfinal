@@ -1,171 +1,132 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaLinkedin, FaInstagram, FaWhatsapp, FaArrowUp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+const tidesLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789727049/rym_website/tides_iit_roorkee.jpg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = [
-    {
-      title: 'Company',
-      links: [
-        { name: 'About Us', href: '/about' },
-        { name: 'Our Projects', href: '/projects' },
-        { name: 'Achievements', href: '/achievements' },
-        { name: 'Partners', href: '/partners' },
-        { name: 'Testimonials', href: '/testimonials' },
-        { name: 'Careers', href: '/careers' },
-        { name: 'Contact', href: '/contact' }
-      ]
-    },
-    {
-      title: 'Products',
-      links: [
-        { name: 'Ultron', href: '/products' },
-        { name: 'AI-Drive Through', href: '/products' },
-        { name: 'REEWS', href: '/products' },
-        { name: 'Shop All', href: '/products' }
-      ]
-    },
-    {
-      title: 'Resources',
-      links: [
-        { name: 'Documentation', href: '#' },
-        { name: 'Blog', href: '#' },
-        { name: 'Privacy Policy', href: '/privacy-policy' },
-        { name: 'Terms of Service', href: '/terms-of-service' }
-      ]
-    }
-  ];
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   const socialLinks = [
     { icon: <FaLinkedin />, href: 'https://www.linkedin.com/company/rym-grenergy/', label: 'LinkedIn' },
-    { icon: <FaInstagram />, href: 'https://www.instagram.com/rym.grenergy?igsh=bzluaGg0ODdsdmd1', label: 'Instagram' }
+    { icon: <FaInstagram />, href: 'https://www.instagram.com/rym.grenergy?igsh=bzluaGg0ODdsdmd1', label: 'Instagram' },
+    { icon: <FaWhatsapp />, href: 'https://wa.me/918200055645', label: 'WhatsApp' }
   ];
 
   return (
-    <footer className="relative bg-gradient-to-t from-black via-gray-950 to-black mt-20">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-emerald-500/5 via-transparent to-transparent pointer-events-none" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/3 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500/3 rounded-full blur-3xl pointer-events-none" />
+    <footer className="relative bg-[#060606] text-white pt-10 sm:pt-14 pb-8 border-t border-white/10 overflow-hidden">
+      {/* Subtle background glows */}
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-64 h-64 bg-teal-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-      {/* Top border */}
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent" />
+      <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 pb-10 sm:pb-12">
+          
+          {/* Brand & Mission Column */}
+          <div className="col-span-2 lg:col-span-4 space-y-4">
+            <Link to="/" className="inline-flex items-center gap-1.5 text-2xl font-bold tracking-tight">
+              <span className="text-white font-heading">RYM</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 font-heading">
+                Grenergy
+              </span>
+            </Link>
+            <p className="text-zinc-300 text-sm font-normal leading-relaxed max-w-sm">
+              Building the future of clean energy and enterprise intelligence through AI, IoT, and smart automation.
+            </p>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 relative z-10">
-        <div className="pt-16 pb-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
-            {/* Brand Section */}
-            <motion.div
-              className="lg:col-span-5 space-y-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-            >
-              <div className="space-y-4">
-                <div className="flex items-center gap-1">
-                  <span className="text-[clamp(1.5rem,5vw,2rem)] lg:text-[clamp(2rem,3vw,2.5rem)] font-bold text-white">RYM</span>
-                  <span className="text-[clamp(1.5rem,5vw,2rem)] lg:text-[clamp(2rem,3vw,2.5rem)] font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">Grenergy</span>
-                </div>
-                <p className="text-gray-400 text-base leading-relaxed max-w-md">
-                  Building the future of clean energy through AI, IoT, and smart automation—powering a more efficient and sustainable world.
-                </p>
+            {/* Incubation Badge */}
+            <div className="flex items-center gap-3 pt-1">
+              <div className="w-9 h-9 bg-white rounded-lg p-1 flex items-center justify-center flex-shrink-0 border border-emerald-500/30">
+                <img src={tidesLogo} alt="TIDES IIT Roorkee" className="w-full h-full object-contain" />
               </div>
-
-              <div className="space-y-4">
-                <div className="flex items-center gap-3 text-gray-400 hover:text-emerald-400 transition-colors duration-200">
-                  <FaMapMarkerAlt className="text-emerald-500 flex-shrink-0" />
-                  <span className="text-sm">Gurugram, NCR, India</span>
-                </div>
-                <div className="flex items-center gap-3 text-gray-400 hover:text-emerald-400 transition-colors duration-200">
-                  <FaPhone className="text-emerald-500 flex-shrink-0" />
-                  <a href="tel:+918200055645" className="text-sm hover:underline">+91-82000-55645</a>
-                </div>
-                <div className="flex items-center gap-3 text-gray-400 hover:text-emerald-400 transition-colors duration-200">
-                  <FaEnvelope className="text-emerald-500 flex-shrink-0" />
-                  <a href="mailto:contact@rym-grenergy.com" className="text-sm hover:underline">contact@rym-grenergy.com</a>
-                </div>
+              <div className="text-xs">
+                <span className="text-emerald-400 font-bold block">Incubated at TIDES IIT Roorkee</span>
+                <span className="text-zinc-400 text-[11px]">DST-NIDHI PRAYAS & DPIIT Recognized</span>
               </div>
+            </div>
 
-              <div className="flex gap-4">
-                {socialLinks.map((social, index) => (
-                  <motion.a
-                    key={index}
-                    href={social.href}
-                    aria-label={social.label}
-                    className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-emerald-400 hover:border-emerald-500/50 hover:bg-emerald-500/10 transition-all duration-200"
-                    whileHover={{ scale: 1.1, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {social.icon}
-                  </motion.a>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Links Section */}
-            <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {footerLinks.map((section, index) => (
-                <motion.div
-                  key={section.title}
-                  className="space-y-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+            {/* Social Icons */}
+            <div className="flex items-center gap-3 pt-2">
+              {socialLinks.map((social, idx) => (
+                <a
+                  key={idx}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-zinc-300 hover:text-emerald-400 hover:border-emerald-500/40 active:scale-95 transition-all cursor-pointer"
                 >
-                  <h4 className="text-white font-semibold text-lg">{section.title}</h4>
-                  <ul className="space-y-3">
-                    {section.links.map((link, linkIndex) => (
-                      <motion.li
-                        key={linkIndex}
-                        whileHover={{ x: 4 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        {link.href.startsWith('/') ? (
-                          <Link
-                            to={link.href}
-                            className="text-gray-400 text-sm hover:text-emerald-400 transition-colors duration-200 block"
-                          >
-                            {link.name}
-                          </Link>
-                        ) : (
-                          <a
-                            href={link.href}
-                            className="text-gray-400 text-sm hover:text-emerald-400 transition-colors duration-200 block"
-                          >
-                            {link.name}
-                          </a>
-                        )}
-                      </motion.li>
-                    ))}
-                  </ul>
-                </motion.div>
+                  {social.icon}
+                </a>
               ))}
             </div>
           </div>
+
+          {/* Quick Links Column */}
+          <div className="col-span-1 lg:col-span-3 space-y-3">
+            <h4 className="text-white font-bold text-xs sm:text-sm uppercase tracking-wider text-emerald-400">Quick Links</h4>
+            <ul className="space-y-2 text-xs sm:text-sm text-zinc-300">
+              <li><Link to="/about" className="hover:text-emerald-400 transition-colors inline-block py-0.5">About Us</Link></li>
+              <li><Link to="/products" className="hover:text-emerald-400 transition-colors inline-block py-0.5">Products</Link></li>
+              <li><Link to="/projects" className="hover:text-emerald-400 transition-colors inline-block py-0.5">Our Projects</Link></li>
+              <li><Link to="/achievements" className="hover:text-emerald-400 transition-colors inline-block py-0.5">Achievements</Link></li>
+              <li><Link to="/partners" className="hover:text-emerald-400 transition-colors inline-block py-0.5">Partners</Link></li>
+              <li><Link to="/testimonials" className="hover:text-emerald-400 transition-colors inline-block py-0.5">Testimonials</Link></li>
+              <li><Link to="/careers" className="hover:text-emerald-400 transition-colors inline-block py-0.5">Careers</Link></li>
+            </ul>
+          </div>
+
+          {/* Key Products Column */}
+          <div className="col-span-1 lg:col-span-3 space-y-3">
+            <h4 className="text-white font-bold text-xs sm:text-sm uppercase tracking-wider text-emerald-400">Products</h4>
+            <ul className="space-y-2 text-xs sm:text-sm text-zinc-300">
+              <li><Link to="/products" className="hover:text-emerald-400 transition-colors inline-block py-0.5">Divya-Drishti AI</Link></li>
+              <li><Link to="/products" className="hover:text-emerald-400 transition-colors inline-block py-0.5">INTELLEXA AI</Link></li>
+              <li><Link to="/products" className="hover:text-emerald-400 transition-colors inline-block py-0.5">Weighbridge AI</Link></li>
+              <li><Link to="/products" className="hover:text-emerald-400 transition-colors inline-block py-0.5">Ultron AI</Link></li>
+              <li><Link to="/products" className="hover:text-emerald-400 transition-colors inline-block py-0.5">Smart EV Integration</Link></li>
+              <li><Link to="/products" className="hover:text-emerald-400 transition-colors inline-block py-0.5">NEXORA ONE</Link></li>
+            </ul>
+          </div>
+
+          {/* Contact Details Column */}
+          <div className="col-span-2 lg:col-span-2 space-y-3 pt-2 sm:pt-0">
+            <h4 className="text-white font-bold text-xs sm:text-sm uppercase tracking-wider text-emerald-400">Contact</h4>
+            <ul className="space-y-2.5 text-xs sm:text-sm text-zinc-300">
+              <li className="flex items-start gap-2.5">
+                <FaMapMarkerAlt className="text-emerald-400 flex-shrink-0 text-sm mt-0.5" />
+                <span className="leading-snug">Gurugram, Sohna Rural, Haryana 122103</span>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <FaPhone className="text-emerald-400 flex-shrink-0 text-sm" />
+                <a href="tel:+918200055645" className="hover:text-emerald-400 transition-colors py-0.5">+91 82000 55645</a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <FaEnvelope className="text-emerald-400 flex-shrink-0 text-sm" />
+                <a href="mailto:contact@rym-grenergy.com" className="hover:text-emerald-400 transition-colors py-0.5 break-all">contact@rym-grenergy.com</a>
+              </li>
+            </ul>
+          </div>
+
         </div>
 
-        {/* Bottom Section */}
-        <motion.div
-          className="border-t border-white/10 py-8"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm text-center sm:text-left">&copy; {currentYear} RYM Grenergy. All rights reserved.</p>
-            <div className="flex flex-wrap items-center justify-center sm:justify-end gap-3 sm:gap-6 text-sm">
-              <Link to="/privacy-policy" className="text-gray-500 hover:text-emerald-400 transition-colors duration-200">Privacy Policy</Link>
-              <span className="text-gray-600">•</span>
-              <Link to="/terms-of-service" className="text-gray-500 hover:text-emerald-400 transition-colors duration-200">Terms of Service</Link>
-            </div>
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400 text-center sm:text-left">
+          <p>&copy; {currentYear} RYM Grenergy. All rights reserved.</p>
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
+            <Link to="/privacy-policy" className="hover:text-emerald-400 transition-colors">Privacy Policy</Link>
+            <span className="hidden sm:inline">•</span>
+            <Link to="/terms-of-service" className="hover:text-emerald-400 transition-colors">Terms of Service</Link>
+            <span className="hidden sm:inline">•</span>
+            <button onClick={scrollToTop} className="inline-flex items-center gap-1 text-emerald-400 font-semibold hover:text-emerald-300 cursor-pointer active:scale-95">
+              Top <FaArrowUp className="text-[10px]" />
+            </button>
           </div>
-        </motion.div>
+        </div>
+
       </div>
     </footer>
   );

@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { FiArrowUpRight } from 'react-icons/fi';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { achievementsPageData } from '../../data/data';
-import journeyImage from '../../assets/images/image.png';
-import achievementNrl5thPrize from '../../assets/images/achievement_nrl_5th_prize.jpg';
-import achievementKpitGoldAward from '../../assets/images/achievement_kpit_gold_award.jpg';
+const journeyImage = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726330/rym_website/image.png';
+const achievementNrl5thPrize = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726567/rym_website/achievement_nrl_5th_prize.jpg';
+const achievementKpitGoldAward = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726555/rym_website/achievement_kpit_gold_award.jpg';
 
 const ImageSlider = ({ images, title }) => {
   const [current, setCurrent] = useState(0);
@@ -80,18 +80,18 @@ const AchievementCard = ({ item, index }) => {
         transform: inView ? 'translateY(0px)' : 'translateY(32px)',
         transition: 'opacity 0.5s ease, transform 0.5s ease',
       }}
-      className="h-[420px] overflow-hidden rounded-xl border border-emerald-400/20 bg-[#111217] shadow-[0_20px_40px_rgba(0,0,0,0.35)] md:rounded-2xl"
+      className="flex flex-col overflow-hidden rounded-xl border border-emerald-400/20 bg-[#111217] shadow-[0_20px_40px_rgba(0,0,0,0.35)] md:rounded-2xl h-full"
     >
-      <div className="mx-5 mt-5 h-52 overflow-hidden rounded-lg border border-black/40 bg-[#0f1117]">
+      <div className="mx-4 mt-4 md:mx-5 md:mt-5 h-48 md:h-52 shrink-0 overflow-hidden rounded-lg border border-black/40 bg-[#0f1117]">
         {item.images && item.images.length > 1
           ? <ImageSlider images={item.images} title={item.title} />
           : <img src={item.image} alt={item.title} className="h-full w-full object-cover" loading="lazy" />
         }
       </div>
-      <div className="flex h-[calc(100%-14.25rem)] flex-col space-y-2 p-5">
+      <div className="flex flex-1 flex-col space-y-2 p-4 md:p-5">
         <span className="text-xs font-semibold text-emerald-400">{item.category}</span>
-        <h3 className="text-xl font-semibold leading-tight">{item.title}</h3>
-        <p className="overflow-hidden text-sm italic leading-relaxed text-white/60">{item.description}</p>
+        <h3 className="text-lg md:text-xl font-semibold leading-tight text-white">{item.title}</h3>
+        <p className="text-sm italic leading-relaxed text-white/60 line-clamp-3">{item.description}</p>
       </div>
     </div>
   );
@@ -134,13 +134,18 @@ const AchievementsPage = () => {
               Know More <FiArrowUpRight />
             </button>
           </div>
-          <div className="relative h-[360px] w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0d0f14] p-3 md:h-[420px]">
-            <img src={journeyImage} alt="Journey" className="h-full w-full rounded-xl object-cover" loading="lazy" />
-            <div className="absolute -bottom-2 left-3 w-[42%] max-w-[220px] overflow-hidden rounded-xl border border-white/20">
-              <img src={achievementKpitGoldAward} alt="KPIT Gold Award" className="h-full w-full object-cover" loading="lazy" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 md:gap-4 h-auto min-h-[380px] md:h-[420px] w-full">
+            <div className="relative h-[240px] sm:h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0d0f14] shadow-lg group">
+              <img src={journeyImage} alt="Journey" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-            <div className="absolute right-3 top-4 w-[38%] max-w-[190px] overflow-hidden rounded-xl border border-white/20">
-              <img src={achievementNrl5thPrize} alt="NRL Prize" className="h-full w-full object-cover" loading="lazy" />
+            <div className="flex flex-col gap-3.5 md:gap-4 h-full">
+              <div className="relative h-[180px] sm:h-1/2 w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0d0f14] shadow-lg group">
+                <img src={achievementKpitGoldAward} alt="KPIT Gold Award" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              </div>
+              <div className="relative h-[180px] sm:h-1/2 w-full overflow-hidden rounded-2xl border border-white/10 bg-[#0d0f14] shadow-lg group">
+                <img src={achievementNrl5thPrize} alt="NRL Prize" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+              </div>
             </div>
           </div>
         </div>

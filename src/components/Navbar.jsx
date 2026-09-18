@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
-import Logo from '../assets/images/Logo.png';
+const Logo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726337/rym_website/Logo.png';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
@@ -107,13 +107,13 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-white hover:text-emerald-400 transition-colors duration-200"
+            className="lg:hidden p-2 text-white hover:text-emerald-400 transition-colors duration-200 cursor-pointer active:scale-95"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
             <div className="w-6 h-6 relative flex items-center justify-center">
               {isMobileMenuOpen ? (
-                <FaTimes className="w-5 h-5" />
+                <FaTimes className="w-5 h-5 text-emerald-400" />
               ) : (
                 <FaBars className="w-5 h-5" />
               )}

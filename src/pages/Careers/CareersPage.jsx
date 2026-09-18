@@ -4,10 +4,10 @@ import {
   FaLightbulb, FaChartLine, FaCogs, FaMapMarkerAlt,
   FaLink, FaRobot, FaArrowRight, FaPlus, FaStar, FaUsers,
 } from 'react-icons/fa';
-import carrer1 from '../../assets/images/carrer1.jpg';
-import carrer2 from '../../assets/images/carrer2.jpg';
-import carrer3 from '../../assets/images/carrer3.png';
-import joinImage from '../../assets/images/join.jpg';
+const carrer1 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726279/rym_website/carrer1.jpg';
+const carrer2 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726280/rym_website/carrer2.jpg';
+const carrer3 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726287/rym_website/carrer3.png';
+const joinImage = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726336/rym_website/join.jpg';
 
 /* ─────────────── data ─────────────── */
 const perks = [

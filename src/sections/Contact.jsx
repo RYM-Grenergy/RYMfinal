@@ -65,13 +65,13 @@ const Contact = () => {
     ];
 
     return (
-        <section className="relative overflow-hidden py-14 md:py-20 bg-linear-to-b from-[#050505] via-[#0b0d0c] to-[#050505]" id="contact">
+        <section className="relative overflow-hidden py-8 md:py-12 bg-linear-to-b from-[#050505] via-[#0b0d0c] to-[#050505]" id="contact">
             <div className="absolute -top-24 right-0 w-72 h-72 bg-emerald-500/10 rounded-full blur-[100px] pointer-events-none" />
             <div className="absolute -bottom-24 -left-12 w-80 h-80 bg-teal-500/8 rounded-full blur-[110px] pointer-events-none" />
 
             <div className="container mx-auto px-4 md:px-6 max-w-6xl relative z-10">
                 <motion.div
-                    className="text-center mb-12 md:mb-16"
+                    className="text-center mb-6 md:mb-10"
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -172,7 +172,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     required
                                     placeholder="Your Name"
-                                    className="w-full h-12 px-4 rounded-md bg-[#0a0f0d] border border-emerald-500/25 text-zinc-100 placeholder-zinc-500 outline-none transition-all focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
+                                    className="w-full h-12 px-4 rounded-md bg-[#0a0f0d] border border-emerald-500/25 text-zinc-100 text-base placeholder-zinc-500 outline-none transition-all focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
                                 />
 
                                 <label htmlFor="email" className="sr-only">Your Email</label>
@@ -184,7 +184,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     required
                                     placeholder="Your Email"
-                                    className="w-full h-12 px-4 rounded-md bg-[#0a0f0d] border border-emerald-500/25 text-zinc-100 placeholder-zinc-500 outline-none transition-all focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
+                                    className="w-full h-12 px-4 rounded-md bg-[#0a0f0d] border border-emerald-500/25 text-zinc-100 text-base placeholder-zinc-500 outline-none transition-all focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
                                 />
 
                                 <label htmlFor="phone" className="sr-only">Your Phone</label>
@@ -196,7 +196,7 @@ const Contact = () => {
                                     onChange={handleChange}
                                     required
                                     placeholder="Your Phone"
-                                    className="w-full h-12 px-4 rounded-md bg-[#0a0f0d] border border-emerald-500/25 text-zinc-100 placeholder-zinc-500 outline-none transition-all focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
+                                    className="w-full h-12 px-4 rounded-md bg-[#0a0f0d] border border-emerald-500/25 text-zinc-100 text-base placeholder-zinc-500 outline-none transition-all focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
                                 />
 
                                 <label htmlFor="message" className="sr-only">Your Message</label>
@@ -208,7 +208,7 @@ const Contact = () => {
                                     required
                                     rows="5"
                                     placeholder="Your Message"
-                                    className="w-full px-4 py-3 rounded-md bg-[#0a0f0d] border border-emerald-500/25 text-zinc-100 placeholder-zinc-500 outline-none resize-none transition-all focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
+                                    className="w-full px-4 py-3 rounded-md bg-[#0a0f0d] border border-emerald-500/25 text-zinc-100 text-base placeholder-zinc-500 outline-none resize-none transition-all focus:border-emerald-400 focus:ring-2 focus:ring-emerald-500/20"
                                 />
 
                                 <motion.button

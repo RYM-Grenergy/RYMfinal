@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
-import heroImage from '../assets/images/Tranform_Your_Energy_Systems_for_Tomorrows_Demands.jpeg';
+const heroImage = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789727059/rym_website/Tranform_Your_Energy_Systems_for_Tomorrows_Demands.jpg';
 
 const Hero = () => {
     const navigate = useNavigate();
@@ -94,7 +94,7 @@ const Hero = () => {
             <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[130px] mix-blend-screen pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-teal-500/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none" />
 
-            <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-36 sm:pt-44 lg:pt-52 pb-24 lg:pb-32">
+            <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 lg:pt-44 pb-12 lg:pb-16">
                 <div className="max-w-4xl">
                     {/* Flex Container for Guaranteed Spacing */}
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '2.5rem', alignItems: 'flex-start' }}>
@@ -107,10 +107,10 @@ const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
                             style={{ marginBottom: '0.5rem' }}
-                            className="text-[clamp(2.5rem,8vw,4.5rem)] lg:text-[clamp(4.5rem,7vw,6rem)] font-bold tracking-tight text-white leading-[1.05] drop-shadow-lg"
+                            className="text-[clamp(2rem,7.5vw,4.5rem)] lg:text-[clamp(4.5rem,7vw,6rem)] font-bold tracking-tight text-white leading-[1.08] drop-shadow-lg"
                         >
                             Transform Your <br />
-                            <span className="relative inline-block min-h-[1.1em] whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 font-black">
+                            <span className="relative inline-block min-h-[1.1em] text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500 font-black">
                                 {`${words[index].substring(0, subIndex)}`}
                                 <span className={`absolute inline-block w-1 h-[0.95em] bg-emerald-400 ml-2 top-1/2 -translate-y-1/2 rounded-sm ${blink ? 'opacity-100' : 'opacity-0'}`} />
                             </span> <br />
@@ -122,8 +122,8 @@ const Hero = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                            style={{ paddingRight: '1rem', marginTop: '1rem' }}
-                            className="text-[clamp(1rem,3vw,1.15rem)] lg:text-[clamp(1.25rem,2vw,1.5rem)] text-zinc-400 font-light max-w-3xl leading-relaxed tracking-wide"
+                            style={{ paddingRight: '0.5rem', marginTop: '1rem' }}
+                            className="text-[clamp(0.95rem,3.5vw,1.15rem)] lg:text-[clamp(1.25rem,2vw,1.5rem)] text-zinc-400 font-light max-w-3xl leading-relaxed tracking-wide"
                         >
                             We build intelligent, AI-powered solutions that optimize efficiency, reduce carbon footprint, and future-proof your infrastructure with <span className="text-emerald-400 font-semibold">unmatched precision</span>.
                         </motion.p>
@@ -133,13 +133,13 @@ const Hero = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                            className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-10 w-full items-center sm:items-start"
+                            className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-8 sm:mt-10 w-full items-center sm:items-start"
                         >
                             <button
                                 type="button"
                                 onClick={handleContact}
                                 onTouchEnd={handleContact}
-                                className="group flex w-full max-w-[280px] sm:w-[170px] sm:max-w-[220px] h-[55px] bg-zinc-900 rounded-[40px] shadow-[0_5px_15px_rgba(16,185,129,0.2)] justify-between items-center border border-zinc-800 hover:border-emerald-500/50 hover:shadow-[0_10px_25px_rgba(16,185,129,0.4)] transition-all duration-300 touch-manipulation mx-auto sm:mx-0"
+                                className="group flex w-full max-w-[280px] sm:w-[170px] sm:max-w-[220px] h-[52px] sm:h-[55px] bg-zinc-900 rounded-[40px] shadow-[0_5px_15px_rgba(16,185,129,0.2)] justify-between items-center border border-zinc-800 hover:border-emerald-500/50 hover:shadow-[0_10px_25px_rgba(16,185,129,0.4)] transition-all duration-300 touch-manipulation mx-auto sm:mx-0 cursor-pointer active:scale-95"
                             >
                                 <span className="flex-1 h-full flex items-center justify-center text-white text-[1rem] font-semibold tracking-[1.2px] uppercase">
                                     Let's go!

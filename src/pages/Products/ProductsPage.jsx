@@ -5,23 +5,27 @@ import { productsData } from '../../data/data';
 
 /* ───────── helpers ───────── */
 const categoryMap = {
+  'Divya-Drishti AI 360°': 'Intelligent Operations',
+  'INTELLEXA AI': 'Intelligent Solutions',
   'Ultron AI': 'Energy',
   'Weighbridge AI': 'Commute',
   'EEW (Early Earthquake Warning System)': 'Energy',
   'Smart EV Integration': 'Connected Mobility',
   'REZONIX': 'Wireless Future',
   'CCTV-Based Attendance': 'AI Vision',
-  'INTELLEXA AI': 'Intelligent Solutions',
+  'NEXORA ONE': 'Business OS',
 };
 
 const taglineMap = {
+  'Divya-Drishti AI 360°': 'Unified AI Platform for Intelligent Business Operations',
+  'INTELLEXA AI': 'Universal Document Intelligence Platform',
   'Ultron AI': 'Smart Energy, Smarter Future',
   'Weighbridge AI': 'Smart traffic-optimization',
   'EEW (Early Earthquake Warning System)': 'Seconds Ahead, Lives Saved.',
   'Smart EV Integration': 'IoT-powered mobile EV command center',
   'REZONIX': 'Intelligent Power, Wireless Future.',
   'CCTV-Based Attendance': 'Instant Attendance, Effortless Accuracy.',
-  'INTELLEXA AI': 'Drive Smarter, Stay Connected',
+  'NEXORA ONE': 'One Platform. Every Operation. Intelligent Growth.',
 };
 
 const fillGrid = (data) => {
@@ -72,7 +76,7 @@ const ProductCard = ({ product, onOpen, index }) => {
 
       {/* image */}
       <div
-        className="relative h-[200px] md:h-[220px] w-full overflow-hidden bg-[#050505]"
+        className="relative h-[120px] sm:h-[180px] md:h-[220px] w-full overflow-hidden bg-[#050505]"
         style={{
           backgroundImage: `url(${product.image})`,
           backgroundSize: 'cover',
@@ -95,26 +99,26 @@ const ProductCard = ({ product, onOpen, index }) => {
       </div>
 
       {/* info */}
-      <div className="relative z-20 p-6 flex flex-col gap-3 flex-1 bg-gradient-to-b from-[#0a0a0a] to-[#0f0f0f]">
+      <div className="relative z-20 p-3.5 sm:p-6 flex flex-col gap-2 sm:gap-3 flex-1 bg-gradient-to-b from-[#0a0a0a] to-[#0f0f0f]">
         {/* name + category */}
-        <div className="flex flex-col gap-1.5">
-          <span className="text-emerald-400/90 text-[10px] font-bold tracking-[0.15em] uppercase">
+        <div className="flex flex-col gap-1">
+          <span className="text-emerald-400/90 text-[9px] sm:text-[10px] font-bold tracking-[0.15em] uppercase truncate">
             {categoryMap[product.name] || 'Energy'}
           </span>
-          <h3 className="text-white font-bold text-[1.15rem] tracking-tight">{product.name}</h3>
+          <h3 className="text-white font-bold text-xs sm:text-[1.15rem] tracking-tight line-clamp-1">{product.name}</h3>
         </div>
 
         {/* tagline */}
-        <p className="text-zinc-400 text-sm leading-relaxed font-light mt-1">
+        <p className="text-zinc-200 text-[11px] sm:text-sm leading-snug sm:leading-relaxed font-normal mt-0.5 line-clamp-2 flex-1">
           {taglineMap[product.name] || (product.description ? product.description.slice(0, 80) + '...' : '')}
         </p>
 
         {/* CTA */}
         <button
           onClick={() => onOpen(product)}
-          className="mt-6 self-start inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[11px] font-bold uppercase tracking-[0.1em] transition-all duration-300 hover:bg-emerald-500 hover:text-black hover:border-emerald-500 hover:shadow-[0_8px_20px_rgba(16,185,129,0.25)] active:scale-95"
+          className="mt-3 sm:mt-6 self-start w-full sm:w-auto inline-flex items-center justify-center gap-1.5 sm:gap-2.5 px-3 py-2 sm:px-5 sm:py-2.5 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-[10px] sm:text-[11px] font-bold uppercase tracking-[0.1em] transition-all duration-300 hover:bg-emerald-500 hover:text-black hover:border-emerald-500 hover:shadow-[0_8px_20px_rgba(16,185,129,0.25)] active:scale-95 cursor-pointer"
         >
-          Know More <FaArrowRight className="text-[10px] transition-transform duration-300 group-hover:translate-x-1" />
+          Know More <FaArrowRight className="text-[9px] sm:text-[10px] transition-transform duration-300 group-hover:translate-x-1" />
         </button>
       </div>
     </motion.div>
@@ -131,7 +135,7 @@ const ContactForm = () => {
   const submit = (e) => {
     e.preventDefault();
     setSubmitting(true);
-    
+
     const text = `Hi RYM Grenergy,\n\nI am requesting information regarding your products. Here are my details:\nName: ${form.name}\nPhone: ${form.phone}\nEmail: ${form.email}`;
     const whatsappUrl = `https://wa.me/918200055645?text=${encodeURIComponent(text)}`;
 
@@ -167,7 +171,7 @@ const ContactForm = () => {
             </p>
             {/* decorative dots */}
             <div className="flex gap-2 mt-10">
-              {[0,1,2].map(i => (
+              {[0, 1, 2].map(i => (
                 <motion.div
                   key={i}
                   className="w-2 h-2 rounded-full bg-emerald-500/40"
@@ -239,11 +243,10 @@ const ContactForm = () => {
 const FilterPill = ({ label, active, onClick }) => (
   <button
     onClick={onClick}
-    className={`relative px-5 py-2 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-300 border overflow-hidden ${
-      active
-        ? 'bg-emerald-500/15 border-emerald-500/50 text-emerald-300 shadow-[0_0_16px_rgba(16,185,129,0.15)]'
-        : 'border-white/[0.08] text-zinc-500 hover:text-zinc-200 hover:border-white/20 hover:bg-white/[0.03]'
-    }`}
+    className={`relative px-3.5 py-2 sm:px-5 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-300 border flex-shrink-0 whitespace-nowrap cursor-pointer active:scale-95 ${active
+      ? 'bg-emerald-500/20 border-emerald-400 text-emerald-300 shadow-[0_0_16px_rgba(16,185,129,0.3)]'
+      : 'border-white/10 text-zinc-400 hover:text-zinc-100 hover:border-white/30 hover:bg-white/[0.05]'
+      }`}
   >
     {active && (
       <motion.div
@@ -267,7 +270,7 @@ const ProductsPage = () => {
       ? cards
       : cards.filter((p) => (categoryMap[p.name] || '') === filter);
 
-  const categories = ['All', 'Intelligent Solutions', 'Commute', 'Energy', 'Connected Mobility', 'Wireless Future', 'AI Vision'];
+  const categories = ['All', 'Intelligent Operations', 'Intelligent Solutions', 'Commute', 'Energy', 'Connected Mobility', 'Wireless Future', 'AI Vision'];
 
   return (
     <>
@@ -276,7 +279,7 @@ const ProductsPage = () => {
         {/* ambient bg */}
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-emerald-500/[0.03] rounded-full blur-[160px] pointer-events-none" />
         <div className="absolute bottom-0 right-0 w-[600px] h-[400px] bg-teal-500/[0.02] rounded-full blur-[120px] pointer-events-none" />
-        
+
         {/* grid pattern */}
         <div className="absolute inset-0 opacity-[0.02] pointer-events-none" style={{
           backgroundImage: 'linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)',
@@ -286,31 +289,32 @@ const ProductsPage = () => {
         <div className="container relative z-10 mx-auto px-4 md:px-6 max-w-[1400px]">
 
           {/* ── Header ── */}
-          <div className="mb-16 md:mb-20">
+          <div className="mb-10 sm:mb-16 md:mb-20">
             {/* title */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="text-center mb-12"
+              className="text-center mb-8 sm:mb-12"
             >
-              <motion.h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.05]">
+              <motion.h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white tracking-tight leading-[1.05]">
                 Future of energy
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-500">
-                  starter kit
-                </span>
               </motion.h1>
             </motion.div>
 
-            {/* toolbar row without Filter/Relevance buttons */}
+            {/* toolbar row with mobile horizontal swipe */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex items-center justify-center"
+              className="relative w-full"
             >
-              <div className="flex items-center gap-3 flex-wrap justify-center">
+              {/* Mobile gradient fades on left and right edges */}
+              <div className="sm:hidden absolute left-0 top-0 bottom-0 w-6 z-20 bg-gradient-to-r from-[#060606] to-transparent pointer-events-none" />
+              <div className="sm:hidden absolute right-0 top-0 bottom-0 w-6 z-20 bg-gradient-to-l from-[#060606] to-transparent pointer-events-none" />
+
+              <div className="w-full overflow-x-auto no-scrollbar scroll-smooth flex items-center gap-2 sm:gap-3 py-2 px-2 sm:px-0 flex-nowrap sm:flex-wrap sm:justify-center">
                 {categories.map((cat) => (
                   <FilterPill
                     key={cat}
@@ -327,7 +331,7 @@ const ProductsPage = () => {
           {/* ── Cards Grid ── */}
           <motion.div
             layout
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+            className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-8"
           >
             <AnimatePresence mode="popLayout">
               {filteredCards.map((product, index) => (
@@ -353,7 +357,7 @@ const ProductsPage = () => {
       <AnimatePresence>
         {selectedProduct && (
           <motion.div
-            className="fixed inset-0 bg-black/90 backdrop-blur-md flex items-center justify-center p-4 z-[1000]"
+            className="fixed inset-0 bg-black/40 backdrop-blur-xl flex items-center justify-center p-4 z-[1000]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -395,7 +399,7 @@ const ProductsPage = () => {
                     {selectedProduct.name}
                   </h2>
                   <div className="w-12 h-[2px] bg-gradient-to-r from-emerald-500 to-transparent" />
-                  <p className="text-sm md:text-[15px] leading-[1.8] text-zinc-400 font-light">
+                  <p className="text-sm md:text-[15px] leading-[1.8] text-zinc-200 font-normal">
                     {selectedProduct.description}
                   </p>
                   <button

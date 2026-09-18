@@ -3,6 +3,7 @@ import Hero from '../../sections/Hero';
 import About from '../../sections/About';
 import Features from '../../sections/Features';
 import Achievements from '../../sections/Achievements';
+import Partners from '../../sections/Partners';
 import Products from '../../sections/Products';
 import Projects from '../../sections/Projects';
 import Testimonials from '../../sections/Testimonials';
@@ -17,6 +18,7 @@ const Homepage = () => {
       <Achievements />
       <Products />
       <Projects />
+      <Partners />
       <Testimonials />
       <Contact />
     </div>

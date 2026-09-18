@@ -35,7 +35,7 @@ const Products = () => {
 
     return (
         <>
-            <section className="bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] py-[50px] md:py-[100px]" id="products">
+            <section className="bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#0a0a0a] py-8 md:py-12" id="products">
                 <div className="container mx-auto px-4 md:px-6 max-w-[1400px]">
                     <motion.div
                         className="text-center"
@@ -47,13 +47,13 @@ const Products = () => {
                         <h2 className="text-[clamp(1.8rem,4vw,3.5rem)] mb-4 font-bold font-heading">
                             Featured <span className="text-transparent bg-clip-text bg-gradient-to-br from-[#10b981] to-[#059669]">Products</span>
                         </h2>
-                        <p className="text-[clamp(0.95rem,1.5vw,1.2rem)] text-[#a0a0a0] max-w-[600px] mx-auto mb-10 md:mb-[60px]">
+                        <p className="text-[clamp(0.95rem,1.5vw,1.2rem)] text-[#a0a0a0] max-w-[600px] mx-auto mb-6 md:mb-8">
                             Innovative solutions designed for the future of energy
                         </p>
                     </motion.div>
 
                     <motion.div
-                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8 mt-[40px] md:mt-[60px]"
+                        className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8 mt-6 md:mt-8"
                         variants={containerVariants}
                         initial="hidden"
                         whileInView="visible"
@@ -65,21 +65,21 @@ const Products = () => {
                                 className="group relative bg-[#111111] border border-[#222222] rounded-[16px] md:rounded-[24px] overflow-hidden transition-all duration-300 hover:border-[#10b981] hover:shadow-[0_20px_40px_rgba(16,185,129,0.1)] flex flex-col h-full"
                                 variants={cardVariants}
                             >
-                                <div className="relative h-[200px] md:h-[260px] overflow-hidden bg-[#0c0c0c] flex items-center justify-center p-4">
+                                <div className="relative h-[120px] sm:h-[200px] md:h-[260px] overflow-hidden bg-[#0c0c0c] flex items-center justify-center p-2 sm:p-4">
                                     <img src={product.image} alt={product.name} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-transparent to-transparent opacity-60 pointer-events-none"></div>
                                 </div>
-                                <div className="p-6 md:p-8 flex flex-col flex-1">
-                                    <h3 className="text-[clamp(1.15rem,4vw,1.35rem)] lg:text-[clamp(1.35rem,2vw,1.5rem)] font-bold text-white mb-3 group-hover:text-[#10b981] transition-colors">{product.name}</h3>
-                                    <p className="text-[clamp(0.85rem,3vw,0.9rem)] lg:text-[0.95rem] text-[#b0b0b0] leading-[1.6] mb-6 flex-1">
-                                         {truncateText(product.description)}
+                                <div className="p-3.5 sm:p-6 md:p-8 flex flex-col flex-1">
+                                    <h3 className="text-xs sm:text-[1.15rem] lg:text-[1.35rem] font-bold text-white mb-1.5 group-hover:text-[#10b981] transition-colors line-clamp-1">{product.name}</h3>
+                                    <p className="text-[11px] sm:text-[0.85rem] lg:text-[0.95rem] text-zinc-200 font-normal leading-snug sm:leading-[1.6] mb-3 flex-1 line-clamp-2">
+                                         {truncateText(product.description, 70)}
                                      </p>
                                     <button
                                         onClick={() => setSelectedProduct(product)}
-                                        className="w-full py-3.5 md:py-4 bg-[#10b981]/10 border border-[#10b981]/30 rounded-lg text-[#10b981] text-[0.9rem] md:text-[0.95rem] font-bold uppercase tracking-[1px] transition-all hover:bg-[#10b981] hover:text-white flex items-center justify-center gap-2 group/btn"
+                                        className="w-full py-2 sm:py-3.5 md:py-4 bg-[#10b981]/10 border border-[#10b981]/30 rounded-lg text-[#10b981] text-[10px] sm:text-[0.9rem] md:text-[0.95rem] font-bold uppercase tracking-[1px] transition-all hover:bg-[#10b981] hover:text-white flex items-center justify-center gap-1.5 sm:gap-2 group/btn cursor-pointer active:scale-95"
                                     >
                                         View Details
-                                        <FaArrowRight className="text-xs transition-transform group-hover/btn:translate-x-1" />
+                                        <FaArrowRight className="text-[9px] sm:text-xs transition-transform group-hover/btn:translate-x-1" />
                                     </button>
                                 </div>
                             </motion.div>
@@ -95,7 +95,7 @@ const Products = () => {
                     >
                         <button
                             onClick={() => navigate('/products')}
-                            className="group inline-flex items-center gap-2 px-7 md:px-8 py-3.5 rounded-full border border-[#10b981]/40 bg-[#10b981]/10 text-[#10b981] text-sm md:text-base font-bold uppercase tracking-[1.2px] transition-all duration-300 hover:bg-[#10b981] hover:text-white hover:border-[#10b981]"
+                            className="group inline-flex items-center gap-2 px-7 md:px-8 py-3.5 rounded-full border border-[#10b981]/40 bg-[#10b981]/10 text-[#10b981] text-sm md:text-base font-bold uppercase tracking-[1.2px] transition-all duration-300 hover:bg-[#10b981] hover:text-white hover:border-[#10b981] cursor-pointer active:scale-95"
                         >
                             Explore More
                             <FaArrowRight className="text-xs transition-transform duration-300 group-hover:translate-x-1" />
@@ -108,18 +108,18 @@ const Products = () => {
             <AnimatePresence>
                 {selectedProduct && (
                     <motion.div
-                        className="fixed inset-0 z-[1000] flex items-center justify-center p-4 md:p-6"
+                        className="fixed inset-0 z-[1000] flex items-center justify-center p-3 sm:p-4 md:p-6"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                     >
                         <motion.div
-                            className="absolute inset-0 bg-black/90 backdrop-blur-md"
+                            className="absolute inset-0 bg-black/40 backdrop-blur-xl"
                             onClick={() => setSelectedProduct(null)}
                         ></motion.div>
 
                         <motion.div
-                            className="relative bg-[#111111] border border-[#222222] rounded-[24px] md:rounded-[32px] w-full max-w-[1000px] max-h-[90vh] overflow-y-auto shadow-[0_0_100px_rgba(16,185,129,0.2)] scrollbar-hide"
+                            className="relative bg-[#111111] border border-[#222222] rounded-[20px] sm:rounded-[24px] md:rounded-[32px] w-full max-w-[1000px] max-h-[92vh] overflow-y-auto shadow-[0_0_100px_rgba(16,185,129,0.2)] scrollbar-hide"
                             initial={{ scale: 0.9, y: 20, opacity: 0 }}
                             animate={{ scale: 1, y: 0, opacity: 1 }}
                             exit={{ scale: 0.9, y: 20, opacity: 0 }}
@@ -127,14 +127,14 @@ const Products = () => {
                         >
                             {/* Close Button */}
                             <button
-                                className="absolute top-4 right-4 md:top-6 md:right-6 z-10 w-10 h-10 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-black/50 border border-white/10 text-white hover:bg-white hover:text-black transition-all"
+                                className="absolute top-3 right-3 md:top-6 md:right-6 z-10 w-9 h-9 md:w-12 md:h-12 flex items-center justify-center rounded-full bg-black/70 border border-white/20 text-white hover:bg-white hover:text-black transition-all cursor-pointer"
                                 onClick={() => setSelectedProduct(null)}
                             >
-                                <FaTimes />
+                                <FaTimes className="text-sm md:text-base" />
                             </button>
 
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                                <div className="relative h-[300px] lg:h-auto overflow-hidden bg-[#080808] flex justify-center items-center p-6">
+                                <div className="relative h-[200px] sm:h-[280px] lg:h-auto overflow-hidden bg-[#080808] flex justify-center items-center p-4 sm:p-6">
                                     <img src={selectedProduct.image} alt={selectedProduct.name} className="w-full h-full max-h-[80vh] object-contain" />
                                     <div className="absolute inset-0 bg-gradient-to-t from-[#111111] lg:bg-gradient-to-r via-transparent to-transparent opacity-60 pointer-events-none"></div>
                                 </div>
@@ -145,7 +145,7 @@ const Products = () => {
                                          <h2 className="text-[clamp(1.75rem,7vw,2.5rem)] lg:text-[clamp(2.5rem,5vw,3rem)] font-bold text-white leading-tight">{selectedProduct.name}</h2>
                                      </div>
 
-                                    <p className="text-[1rem] md:text-[1.1rem] leading-[1.8] text-[#d0d0d0] font-light italic border-l-2 border-[#10b981] pl-6 py-2">
+                                    <p className="text-[1rem] md:text-[1.1rem] leading-[1.8] text-zinc-100 font-normal border-l-2 border-[#10b981] pl-6 py-2">
                                         {selectedProduct.description}
                                     </p>
 

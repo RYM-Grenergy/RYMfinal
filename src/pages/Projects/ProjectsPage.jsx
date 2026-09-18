@@ -10,15 +10,15 @@ import {
   FaTimes,
   FaArrowRight
 } from 'react-icons/fa';
-import aiVisual from '../../assets/images/CCTV.png';
-import intellexaVisual from '../../assets/images/Intelexa.png';
-import evVisual from '../../assets/images/EV_Charging.jpeg';
-import idpVisual from '../../assets/images/IDP.png';
-import eqVisual from '../../assets/images/product.png';
-import driveVisual from '../../assets/images/AIDrive.png';
-import rezonixVisual from '../../assets/images/Renox.png';
-import ais140Visual from '../../assets/images/AIS.png';
-import smartHomeVisual from '../../assets/images/SHAS.png';
+const aiVisual = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726291/rym_website/CCTV.png';
+const intellexaVisual = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726333/rym_website/Intelexa.png';
+const evVisual = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726309/rym_website/EV_Charging.jpg';
+const idpVisual = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726312/rym_website/IDP.png';
+const eqVisual = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726888/rym_website/product.png';
+const driveVisual = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726263/rym_website/AIDrive.png';
+const rezonixVisual = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726386/rym_website/Renox.png';
+const ais140Visual = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726264/rym_website/AIS.png';
+const smartHomeVisual = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726924/rym_website/SHAS.png';
 import { useTheme } from '../../context/ThemeContext';
 
 const projectDetails = [
@@ -40,7 +40,7 @@ const projectDetails = [
         ]
       }
     ],
-  
+
   },
   {
     id: 'intellexa-ai',
@@ -242,38 +242,26 @@ const ProjectVisualSection = ({ project, accent }) => {
   const isAisProject = project.id === 'ais-140-gps-devices';
 
   return (
-    <div className="group relative h-52 w-full overflow-hidden border-b border-white/20">
+    <div className="group relative h-32 sm:h-52 w-full overflow-hidden border-b border-white/20">
       <img
         src={project.coverImage}
         alt={`${project.title} visual`}
-        className={`h-full w-full transition-transform duration-700 ease-out group-hover:scale-110 ${
-          isAisProject ? 'object-contain bg-[#07090f] p-2' : 'object-cover'
-        }`}
+        className={`h-full w-full transition-transform duration-700 ease-out group-hover:scale-110 ${isAisProject ? 'object-contain bg-[#07090f] p-2' : 'object-cover'
+          }`}
         loading="lazy"
       />
 
       <div className="absolute inset-0 bg-gradient-to-r from-[#05080d]/95 via-[#05080d]/75 to-[#05080d]/35" />
-      <div
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px)',
-          backgroundSize: '56px 56px'
-        }}
-      />
 
-      <div className="absolute left-3 top-3 right-3 flex items-center justify-between gap-2">
-        <h3 className="line-clamp-1 text-sm font-extrabold uppercase tracking-tight text-white md:text-base">{project.title}</h3>
-        <span className={`hidden border px-2 py-1 text-[9px] font-semibold uppercase tracking-[0.18em] sm:inline-block ${accent.chip}`}>
-          Live
-        </span>
+      <div className="absolute left-2.5 top-2.5 right-2.5 flex items-center justify-between gap-1">
+        <h3 className="line-clamp-1 text-xs font-extrabold uppercase tracking-tight text-white sm:text-base">{project.title}</h3>
       </div>
 
-      <div className="absolute left-3 right-3 top-12 overflow-hidden bg-cyan-300/85 px-3 py-1.5">
-        <p className="line-clamp-1 text-xs font-bold italic text-[#07314b] md:text-sm">{project.subtitle}</p>
+      <div className="absolute left-2.5 right-2.5 top-8 sm:top-12 overflow-hidden bg-cyan-300/85 px-2 py-1">
+        <p className="line-clamp-1 text-[10px] sm:text-sm font-bold italic text-[#07314b]">{project.subtitle}</p>
       </div>
 
-      <div className="absolute bottom-3 right-3 h-24 w-20 overflow-hidden rounded-xl border-2 border-white/80 bg-black/35 shadow-[0_12px_24px_rgba(0,0,0,0.45)] sm:h-28 sm:w-24 transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:rotate-2 group-hover:scale-105">
+      <div className="absolute bottom-2 right-2 hidden sm:block h-28 w-24 overflow-hidden rounded-xl border-2 border-white/80 bg-black/35 shadow-[0_12px_24px_rgba(0,0,0,0.45)] transition-transform duration-500 ease-out group-hover:-translate-y-2 group-hover:rotate-2 group-hover:scale-105">
         <img
           src={project.coverImage}
           alt={`${project.title} app preview`}
@@ -312,22 +300,19 @@ const ProjectsPage = () => {
       <div className="pointer-events-none absolute left-[-15rem] top-[12rem] h-[35rem] w-[35rem] rounded-full bg-cyan-500/15 blur-[180px]" />
       <div className="pointer-events-none absolute bottom-[-12rem] right-[-10rem] h-[28rem] w-[28rem] rounded-full bg-emerald-500/15 blur-[180px]" />
 
-      <section className="relative mx-auto max-w-[1320px] px-4 pb-16 pt-24 md:px-8 md:pt-28">
+      <section className="relative mx-auto max-w-[1320px] px-4 pb-12 pt-24 md:px-8 md:pt-28">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="mx-auto max-w-4xl text-center"
         >
-          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-cyan-200/80">Project Showcase</p>
-          <h1 className="text-4xl font-black uppercase tracking-tight md:text-6xl">Real Deployments. Measurable Impact.</h1>
-          <p className="mx-auto mt-5 max-w-3xl text-sm leading-relaxed text-white/70 md:text-lg">
-            A dedicated portfolio of intelligent systems delivered by RYM Grenergy across mobility, automation, education, and disaster resilience.
-          </p>
+          <p className="mb-3 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.35em] text-cyan-200/80">Project Showcase</p>
+          <h1 className="text-3xl font-black uppercase tracking-tight md:text-6xl">Real Deployments.</h1>
         </motion.div>
       </section>
 
-      <section className="relative mx-auto grid max-w-[1300px] grid-cols-1 gap-6 px-4 pb-20 sm:grid-cols-2 lg:grid-cols-3 md:px-8">
+      <section className="relative mx-auto grid max-w-[1300px] grid-cols-2 gap-3 px-3 pb-16 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 sm:px-4 md:px-8">
         {projectDetails.map((project, index) => {
           const accent = accentStyles[project.accent] || accentStyles.emerald;
           const visibleSections = project.sections.slice(0, 1);
@@ -341,57 +326,46 @@ const ProjectsPage = () => {
               whileHover={{ y: -8 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.6, delay: Math.min(index * 0.06, 0.32) }}
-              className="relative flex h-full min-h-[640px] flex-col overflow-hidden border border-white/15 bg-[#10141a]/90 shadow-[0_20px_35px_rgba(0,0,0,0.35)] transition-colors duration-300 hover:border-cyan-500/40 hover:shadow-[0_25px_50px_rgba(0,0,0,0.5)]"
+              className="relative flex h-full flex-col overflow-hidden border border-white/15 bg-[#10141a]/90 shadow-[0_20px_35px_rgba(0,0,0,0.35)] transition-colors duration-300 hover:border-cyan-500/40 hover:shadow-[0_25px_50px_rgba(0,0,0,0.5)] rounded-xl"
             >
               <ProjectVisualSection project={project} accent={accent} />
 
-              <div className="relative flex flex-1 flex-col p-4">
-                <div className="mb-2 flex flex-wrap items-center gap-2">
-                  <h2 className="text-base font-extrabold uppercase tracking-tight text-white md:text-lg">{project.title}</h2>
-                  <span className={`border px-2 py-1 text-[9px] font-semibold uppercase tracking-[0.18em] ${accent.chip}`}>
-                    Case Study
-                  </span>
+              <div className="relative flex flex-1 flex-col p-2.5 sm:p-4">
+                <div className="mb-1 flex flex-wrap items-center gap-1 sm:gap-2">
+                  <h2 className="text-xs sm:text-base font-extrabold uppercase tracking-tight text-white line-clamp-1">{project.title}</h2>
                 </div>
 
-                <p className="mb-3 text-sm font-semibold text-cyan-100/90 md:text-base">{project.subtitle}</p>
+                <p className="mb-1 text-[10px] sm:text-sm font-semibold text-cyan-100/90 line-clamp-1">{project.subtitle}</p>
 
                 {project.summary && (
-                  <p className="mb-3 text-xs leading-relaxed text-white/80 md:text-sm">
-                    {getPreviewText(project.summary, 140)}
+                  <p className="mb-2 text-[10px] sm:text-xs leading-relaxed text-white/80 line-clamp-2">
+                    {getPreviewText(project.summary, 70)}
                   </p>
                 )}
 
-                <div className="space-y-3">
+                <div className="space-y-1 flex-1">
                   {visibleSections.map((section) => {
-                    const shownBullets = section.bullets.slice(0, 2);
+                    const shownBullets = section.bullets.slice(0, 1);
 
                     return (
-                    <div key={section.heading} className="border border-white/15 bg-black/35 p-3">
-                      <h3 className="mb-2 text-sm font-bold tracking-tight text-white">{section.heading}</h3>
-                      <ul className="space-y-1 text-xs text-white/90 md:text-sm">
-                        {shownBullets.map((item) => (
-                          <li key={item} className="flex items-start gap-2 leading-relaxed">
-                            <FaCircle className="mt-1 text-[7px] text-cyan-200" />
-                            <span>{item}</span>
-                          </li>
-                        ))}
-                        {section.bullets.length > shownBullets.length && (
-                          <li className="pl-4 text-[11px] text-cyan-100/75">
-                            +{section.bullets.length - shownBullets.length} more points
-                          </li>
-                        )}
-                      </ul>
-                    </div>
-                  )})}
-
-                  {project.sections.length > visibleSections.length && (
-                    <p className="text-[11px] text-cyan-100/75">+{project.sections.length - visibleSections.length} more sections</p>
-                  )}
+                      <div key={section.heading} className="border border-white/15 bg-black/35 p-2 rounded-lg">
+                        <h3 className="mb-1 text-[10px] sm:text-xs font-bold tracking-tight text-white line-clamp-1">{section.heading}</h3>
+                        <ul className="space-y-0.5 text-[9px] sm:text-xs text-white/90">
+                          {shownBullets.map((item) => (
+                            <li key={item} className="flex items-start gap-1 leading-tight line-clamp-1">
+                              <FaCircle className="mt-1 shrink-0 text-[4px] sm:text-[6px] text-cyan-200" />
+                              <span className="truncate">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )
+                  })}
                 </div>
 
                 {project.bottomNote && (
-                  <p className="mt-3 flex items-center gap-2 text-sm font-semibold text-amber-100 md:text-base cursor-default">
-                    <FaUserTie className="text-amber-200" />
+                  <p className="mt-2 flex items-center gap-1 text-[9px] sm:text-xs font-semibold text-amber-100 cursor-default">
+                    <FaUserTie className="shrink-0 text-amber-200 text-[9px]" />
                     <span className="truncate">{project.bottomNote}</span>
                   </p>
                 )}
@@ -399,10 +373,10 @@ const ProjectsPage = () => {
                 <button
                   type="button"
                   onClick={() => setSelectedProject(project)}
-                  className="group mt-auto inline-flex items-center gap-2.5 rounded-lg bg-emerald-500 px-4 py-2.5 text-[10px] font-extrabold uppercase tracking-[0.18em] text-black transition-all hover:bg-emerald-400 hover:shadow-[0_8px_24px_rgba(16,185,129,0.35)] hover:-translate-y-0.5 active:scale-95"
+                  className="group mt-3 w-full inline-flex items-center justify-center gap-1.5 rounded-lg bg-emerald-500 px-2.5 py-2 text-[9px] sm:text-[10px] font-extrabold uppercase tracking-[0.12em] text-black transition-all hover:bg-emerald-400 hover:shadow-[0_8px_24px_rgba(16,185,129,0.35)] active:scale-95 cursor-pointer"
                 >
                   Know More
-                  <FaArrowRight className="text-[10px] transition-transform duration-300 group-hover:translate-x-1" />
+                  <FaArrowRight className="text-[9px] transition-transform duration-300 group-hover:translate-x-1" />
                 </button>
               </div>
             </motion.article>
@@ -411,7 +385,7 @@ const ProjectsPage = () => {
       </section>
 
       <section className="relative border-t border-white/10 py-16 md:py-20">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -439,67 +413,67 @@ const ProjectsPage = () => {
             className="space-y-6"
           >
             <div className="space-y-4">
-               <h2 className="text-3xl font-semibold leading-tight md:text-5xl">Get In Touch With Us!</h2>
-               <p className="max-w-[560px] text-base italic leading-relaxed text-white/80 md:text-xl md:leading-relaxed">
-                 Begin your journey at RYM. Fill in your details and our team will reach out to you.
-               </p>
-             </div>
- 
-             <div className="space-y-4 pt-1 text-white/95">
-               <div className="flex items-center gap-4 text-base md:text-lg">
-                 <FaMapMarkerAlt className="text-emerald-400" />
-                 <span>Gurugram, NCR, India</span>
-               </div>
-               <div className="flex items-center gap-4 text-base md:text-lg">
-                 <FaPhoneAlt className="text-emerald-400" />
-                 <a href="tel:+918200055645" className="transition hover:text-emerald-300">
-                   +91-82000-55645
-                 </a>
-               </div>
-               <div className="flex items-center gap-4 text-base md:text-lg">
-                 <FaEnvelope className="text-emerald-400" />
-                 <a href="mailto:contact@rym-grenergy.com" className="break-all transition hover:text-emerald-300">
-                   contact@rym-grenergy.com
-                 </a>
-               </div>
-             </div>
-           </motion.div>
- 
-           <motion.form
-             onSubmit={handleSubmit}
-             initial={{ opacity: 0, x: 24 }}
-             whileInView={{ opacity: 1, x: 0 }}
-             viewport={{ once: true }}
-             transition={{ duration: 0.7 }}
-             className="w-full space-y-4 border border-white/15 bg-[#0b0c14] p-5 md:p-7"
-           >
-             <input
-               type="text"
-               placeholder="Name*"
-               className="w-full border border-transparent bg-[#d5d5d5] px-4 py-3 text-sm text-black/75 outline-none transition focus:border-emerald-500 md:px-5 md:text-base"
-             />
-             <input
-               type="text"
-               placeholder="Phone Number*"
-               className="w-full border border-transparent bg-[#d5d5d5] px-4 py-3 text-sm text-black/75 outline-none transition focus:border-emerald-500 md:px-5 md:text-base"
-             />
-             <input
-               type="email"
-               placeholder="Email*"
-               className="w-full border border-transparent bg-[#d5d5d5] px-4 py-3 text-sm text-black/75 outline-none transition focus:border-emerald-500 md:px-5 md:text-base"
-             />
-             <button
-               type="submit"
-               className="w-full bg-emerald-400 px-4 py-3 text-base font-semibold text-black transition hover:bg-emerald-300 md:text-lg"
-             >
-               Submit
-             </button>
-             <p className="pt-2 text-xs leading-relaxed text-white/40 md:text-sm">
-               By clicking on Submit you are agreeing to our Privacy Policy and allowing us (RYM Energy) and our service partners to get in touch with you.
-             </p>
-           </motion.form>
-         </div>
-       </section>
+              <h2 className="text-3xl font-semibold leading-tight md:text-5xl">Get In Touch With Us!</h2>
+              <p className="max-w-[560px] text-base italic leading-relaxed text-white/80 md:text-xl md:leading-relaxed">
+                Begin your journey at RYM. Fill in your details and our team will reach out to you.
+              </p>
+            </div>
+
+            <div className="space-y-4 pt-1 text-white/95">
+              <div className="flex items-center gap-4 text-base md:text-lg">
+                <FaMapMarkerAlt className="text-emerald-400" />
+                <span>Gurugram, NCR, India</span>
+              </div>
+              <div className="flex items-center gap-4 text-base md:text-lg">
+                <FaPhoneAlt className="text-emerald-400" />
+                <a href="tel:+918200055645" className="transition hover:text-emerald-300">
+                  +91-82000-55645
+                </a>
+              </div>
+              <div className="flex items-center gap-4 text-base md:text-lg">
+                <FaEnvelope className="text-emerald-400" />
+                <a href="mailto:contact@rym-grenergy.com" className="break-all transition hover:text-emerald-300">
+                  contact@rym-grenergy.com
+                </a>
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.form
+            onSubmit={handleSubmit}
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="w-full space-y-4 border border-white/15 bg-[#0b0c14] p-5 md:p-7"
+          >
+            <input
+              type="text"
+              placeholder="Name*"
+              className="w-full border border-transparent bg-[#d5d5d5] px-4 py-3 text-sm text-black/75 outline-none transition focus:border-emerald-500 md:px-5 md:text-base"
+            />
+            <input
+              type="text"
+              placeholder="Phone Number*"
+              className="w-full border border-transparent bg-[#d5d5d5] px-4 py-3 text-sm text-black/75 outline-none transition focus:border-emerald-500 md:px-5 md:text-base"
+            />
+            <input
+              type="email"
+              placeholder="Email*"
+              className="w-full border border-transparent bg-[#d5d5d5] px-4 py-3 text-sm text-black/75 outline-none transition focus:border-emerald-500 md:px-5 md:text-base"
+            />
+            <button
+              type="submit"
+              className="w-full bg-emerald-400 px-4 py-3 text-base font-semibold text-black transition hover:bg-emerald-300 md:text-lg"
+            >
+              Submit
+            </button>
+            <p className="pt-2 text-xs leading-relaxed text-white/40 md:text-sm">
+              By clicking on Submit you are agreeing to our Privacy Policy and allowing us (RYM Energy) and our service partners to get in touch with you.
+            </p>
+          </motion.form>
+        </div>
+      </section>
 
       <AnimatePresence>
         {selectedProject && (
@@ -519,7 +493,7 @@ const ProjectsPage = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="absolute left-0 top-0 h-[2px] w-full rounded-t-[28px] bg-gradient-to-r from-transparent via-cyan-500/60 to-transparent" />
-              
+
               <button
                 className="absolute right-4 top-4 z-[1010] flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/10 bg-white/10 text-sm text-white backdrop-blur-sm transition-all duration-200 hover:scale-110 hover:border-cyan-500 hover:bg-cyan-500 hover:text-black"
                 onClick={() => setSelectedProject(null)}
@@ -531,12 +505,11 @@ const ProjectsPage = () => {
                 <img
                   src={selectedProject.coverImage}
                   alt={selectedProject.title}
-                  className={`h-full w-full ${
-                    selectedProject.id === 'ais-140-gps-devices' ? 'object-contain bg-[#07090f]' : 'object-cover'
-                  }`}
+                  className={`h-full w-full ${selectedProject.id === 'ais-140-gps-devices' ? 'object-contain bg-[#07090f]' : 'object-cover'
+                    }`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0a0a0a]/30 md:bg-gradient-to-r" />
-                
+
                 <div className="absolute bottom-6 left-6 right-6">
                   <span className={`inline-block border px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] mb-3 border-emerald-300/40 bg-emerald-400/20 text-emerald-200`}>
                     Case Study
@@ -597,7 +570,7 @@ const ProjectsPage = () => {
                       <p className="mt-1 text-2xl font-black text-lime-100">1-2 Sec TAT</p>
                     </div>
                   )}
-                  
+
                   {selectedProject.contactBlock && (
                     <div className="rounded-xl border border-emerald-300/30 bg-black/40 p-4">
                       <h4 className="mb-3 text-xs font-bold uppercase tracking-wider text-emerald-400">{selectedProject.contactBlock.heading}</h4>

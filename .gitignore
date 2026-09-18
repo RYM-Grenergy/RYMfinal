@@ -29,3 +29,7 @@ yarn-error.log*
 *.swp
 *.swo
 *~
+
+# Vite
+*.timestamp-*.mjs
+

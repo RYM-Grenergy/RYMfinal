@@ -1,25 +1,25 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHandshake, FaExternalLinkAlt } from 'react-icons/fa';
-import vegavruddhiLogo from '../../assets/images/partner_vegavruddhi.png';
-import synchronousLogo from '../../assets/images/partner_synchronous.png';
-import boxfoxLogo from '../../assets/images/partner_boxfox.png';
-import seemeeLogo from '../../assets/images/partner_seemee.png';
-import sovraLogo from '../../assets/images/partner_sovra.png';
-import bworthLogo from '../../assets/images/partner_bworth.png';
-import closetrushLogo from '../../assets/images/partner_closetrush.png';
-import iitRoorkeeLogo from '../../assets/images/partner_iit_roorkee.png';
-import inventisLabsLogo from '../../assets/images/partner_inventis_labs.png';
-import jswLogo from '../../assets/images/partner_jsw.png';
-import leymenLogo from '../../assets/images/partner_leymen.png';
-import bmLogo from '../../assets/images/partner_bm.png';
-import khannasSupremeLogo from '../../assets/images/partner_khannas_supreme.png';
-import shreeCementLogo from '../../assets/images/partner_shree_cement.png';
-import rkMarbleLogo from '../../assets/images/partner_rk_marble.png';
-import jkCementLogo from '../../assets/images/partner_jk_cement.png';
-import golchaAssociatedLogo from '../../assets/images/partner_golcha_associated.png';
-import gkmLogo from '../../assets/images/partner_gkm.png';
-import aclLogo from '../../assets/images/partner_acl.png';
+const vegavruddhiLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726354/rym_website/partner_vegavruddhi.jpg';
+const synchronousLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726353/rym_website/partner_synchronous.jpg';
+const boxfoxLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726342/rym_website/partner_boxfox.jpg';
+const seemeeLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726351/rym_website/partner_seemee.jpg';
+const sovraLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726353/rym_website/partner_sovra.jpg';
+const bworthLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726342/rym_website/partner_bworth.jpg';
+const closetrushLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726343/rym_website/partner_closetrush.jpg';
+const iitRoorkeeLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726346/rym_website/partner_iit_roorkee.jpg';
+const inventisLabsLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726347/rym_website/partner_inventis_labs.jpg';
+const jswLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726348/rym_website/partner_jsw.jpg';
+const leymenLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726350/rym_website/partner_leymen.jpg';
+const bmLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726341/rym_website/partner_bm.jpg';
+const khannasSupremeLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726349/rym_website/partner_khannas_supreme.jpg';
+const shreeCementLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726352/rym_website/partner_shree_cement.jpg';
+const rkMarbleLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726350/rym_website/partner_rk_marble.jpg';
+const jkCementLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726347/rym_website/partner_jk_cement.jpg';
+const golchaAssociatedLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726345/rym_website/partner_golcha_associated.jpg';
+const gkmLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726344/rym_website/partner_gkm.jpg';
+const aclLogo = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726340/rym_website/partner_acl.jpg';
 
 const partnersData = [
   {
@@ -253,7 +253,7 @@ const PartnersPage = () => {
                 <p className="text-sm leading-relaxed text-white/60">{partner.description}</p>
               </div>
 
-              
+
             </motion.div>
           ))}
         </motion.div>
