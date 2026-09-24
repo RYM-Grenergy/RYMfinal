@@ -10,18 +10,20 @@ const ImageSlider = ({ images, title }) => {
   const [current, setCurrent] = useState(0);
   const prev = (e) => { e.stopPropagation(); setCurrent((c) => (c - 1 + images.length) % images.length); };
   const next = (e) => { e.stopPropagation(); setCurrent((c) => (c + 1) % images.length); };
+  const src = images[current];
   return (
-    <div className="relative h-full w-full">
-      <img src={images[current]} alt={title} className="h-full w-full object-cover" loading="lazy" />
-      <button onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full p-1">
+    <div className="relative h-full w-full group/slider overflow-hidden bg-[#0a0c10]">
+      <img src={src} alt="" className="absolute inset-0 h-full w-full object-cover blur-xl opacity-35 scale-110" aria-hidden="true" />
+      <img src={src} alt={title} className="relative z-10 h-full w-full object-contain transition-transform duration-500 group-hover/slider:scale-105" loading="lazy" />
+      <button onClick={prev} className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-emerald-500 text-white rounded-full p-1.5 transition-colors z-20">
         <FaChevronLeft size={12} />
       </button>
-      <button onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full p-1">
+      <button onClick={next} className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/70 hover:bg-emerald-500 text-white rounded-full p-1.5 transition-colors z-20">
         <FaChevronRight size={12} />
       </button>
-      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+      <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1 z-20 bg-black/50 px-2 py-0.5 rounded-full backdrop-blur-sm">
         {images.map((_, i) => (
-          <div key={i} className={`h-1.5 w-1.5 rounded-full ${i === current ? 'bg-emerald-400' : 'bg-white/40'}`} />
+          <div key={i} className={`h-1.5 w-1.5 rounded-full transition-all ${i === current ? 'bg-emerald-400 w-3' : 'bg-white/50'}`} />
         ))}
       </div>
     </div>
@@ -78,19 +80,24 @@ const AchievementCard = ({ item, index }) => {
         transitionDelay: `${delay}ms`,
         opacity: inView ? 1 : 0,
         transform: inView ? 'translateY(0px)' : 'translateY(32px)',
-        transition: 'opacity 0.5s ease, transform 0.5s ease',
+        transition: 'opacity 0.5s ease, transform 0.5s ease, border-color 0.3s ease, box-shadow 0.3s ease',
       }}
-      className="flex flex-col overflow-hidden rounded-xl border border-emerald-400/20 bg-[#111217] shadow-[0_20px_40px_rgba(0,0,0,0.35)] md:rounded-2xl h-full"
+      className="group flex flex-col overflow-hidden rounded-xl border border-emerald-400/20 bg-[#111217] shadow-[0_20px_40px_rgba(0,0,0,0.35)] hover:border-emerald-400/50 hover:shadow-[0_20px_40px_rgba(16,185,129,0.18)] md:rounded-2xl h-full"
     >
-      <div className="mx-4 mt-4 md:mx-5 md:mt-5 h-48 md:h-52 shrink-0 overflow-hidden rounded-lg border border-black/40 bg-[#0f1117]">
+      <div className="mx-4 mt-4 md:mx-5 md:mt-5 h-52 md:h-60 shrink-0 overflow-hidden rounded-lg border border-black/40 bg-[#0a0c10] relative">
         {item.images && item.images.length > 1
           ? <ImageSlider images={item.images} title={item.title} />
-          : <img src={item.image} alt={item.title} className="h-full w-full object-cover" loading="lazy" />
+          : (
+            <div className="relative h-full w-full overflow-hidden">
+              <img src={item.image} alt="" className="absolute inset-0 h-full w-full object-cover blur-xl opacity-35 scale-110" aria-hidden="true" />
+              <img src={item.image} alt={item.title} className="relative z-10 h-full w-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+            </div>
+          )
         }
       </div>
       <div className="flex flex-1 flex-col space-y-2 p-4 md:p-5">
         <span className="text-xs font-semibold text-emerald-400">{item.category}</span>
-        <h3 className="text-lg md:text-xl font-semibold leading-tight text-white">{item.title}</h3>
+        <h3 className="text-lg md:text-xl font-semibold leading-tight text-white group-hover:text-emerald-300 transition-colors">{item.title}</h3>
         <p className="text-sm italic leading-relaxed text-white/60 line-clamp-3">{item.description}</p>
       </div>
     </div>

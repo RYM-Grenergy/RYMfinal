@@ -5,6 +5,7 @@
 
 export const CLOUDINARY_IMAGES = {
   "achievement_green_india_hackathon.jpg.jpeg": "https://res.cloudinary.com/uesw5nai/image/upload/v1789725813/rym_website/achievement_green_india_hackathon_jpg.jpg",
+  "achievement.jpeg": "https://res.cloudinary.com/uesw5nai/image/upload/v1790230358/rym_website/achievement.jpg",
   "SmartSystems_HP.gif": "https://res.cloudinary.com/uesw5nai/image/upload/v1789725815/rym_website/SmartSystems_HP.gif",
   "Technologies.gif": "https://res.cloudinary.com/uesw5nai/image/upload/v1789725818/rym_website/Technologies.gif",
   "Ultron.png": "https://res.cloudinary.com/uesw5nai/image/upload/v1789725820/rym_website/Ultron.png",

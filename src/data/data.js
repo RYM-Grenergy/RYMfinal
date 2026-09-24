@@ -1,3 +1,5 @@
+const achievementAnveshana2023 = 'https://res.cloudinary.com/uesw5nai/image/upload/v1790230358/rym_website/achievement.jpg';
+
 const productUltron = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725820/rym_website/Ultron.png';
 const productAiDrive = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789727178/rym_website/Weighbridge_AI.png';
 const productReews = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726888/rym_website/product.png';
@@ -16,7 +18,7 @@ const productVyaraTiles = 'https://res.cloudinary.com/uesw5nai/image/upload/v178
 const achievementGreenIndiaHackathon = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725813/rym_website/achievement_green_india_hackathon_jpg.jpg';
 const achievementShardaHackathon = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726262/rym_website/achievement_sharda_hackathon_jpg.jpg';
 const achievementAnyeshana = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725825/rym_website/achievement_anyeshana.jpg';
-const achievementHackKrmu = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725836/rym_website/achievement_hack_krmu.jpg';
+const achievementHackKrmu = 'https://res.cloudinary.com/uesw5nai/image/upload/v1790235152/rym_website/achievement_hack_krmu_new.jpg';
 const achievementLeadConclave = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789726026/rym_website/achievement_lead_conclave.jpg';
 const achievementGreatIndiaHackathon = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725826/rym_website/achievement_great_india_hackathon.jpg';
 const achievementInnospark = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789725926/rym_website/achievement_innospark.jpg';
@@ -157,14 +159,14 @@ export const achievementsPageData = [
     category: 'Team Milestone',
     title: 'NRL Hackathon Team Group Photo',
     description: 'A proud team moment captured with participants, organizers, and jury members.',
-    image: achievementNrlGroupPhoto
+    image: achievementHackaithon1
   },
   {
     id: 4,
     category: 'Winner',
     title: 'Parul Hack Verse Validation Ceremony',
     description: 'Our team receiving recognition during the Hack Verse validation ceremony.',
-    image: achievementParulHackverse
+    image: achievementNrlGroupPhoto
   },
   {
     id: 5,
@@ -172,13 +174,6 @@ export const achievementsPageData = [
     title: 'LEAD 2.0 Autonomous Challenge',
     description: 'Won third prize for impactful performance in the LEAD autonomous innovation event.',
     image: achievementLeadThirdPrize
-  },
-  {
-    id: 6,
-    category: 'Gold Award',
-    title: 'KPIT Sparkle Gold Award',
-    description: 'Secured the Gold Award at KPIT Sparkle for breakthrough sustainable technology.',
-    image: achievementKpitGoldAward
   },
   {
     id: 7,
@@ -232,9 +227,10 @@ export const achievementsPageData = [
   {
     id: 15,
     category: '10th Position',
-    title: 'Anyeshana Competition',
-    description: 'Secured 10th position at the Anyeshana Competition held on 8th-10th Feb 2023, winning ₹5,000 cash prize and certificates.',
-    image: achievementAnyeshana
+    title: 'Anveshana Competition 2023',
+    description: 'Secured 10th position at the Anveshana Competition held on 8th-10th Feb 2023, winning ₹5,000 cash prize and certificates.',
+    image: achievementAnveshana2023,
+    images: [achievementAnveshana2023, achievementAnyeshana]
   },
   {
     id: 16,
@@ -284,8 +280,8 @@ export const achievementsPageData = [
     category: '1st Prize',
     title: 'HackAIthon - SRIT Jabalpur',
     description: 'Won 1st position at HackAIthon held on 16th-18th Sept 2023 at SRIT Jabalpur, winning ₹70,000 cash prize, certificates and swags. Two RYM teams secured top positions.',
-    image: achievementHackaithon1,
-    images: [achievementHackaithon1, achievementHackaithon2, achievementHackaithon3, achievementHackaithon4]
+    image: achievementHackaithon2,
+    images: [achievementHackaithon2, achievementHackaithon3, achievementHackaithon4]
   }
 ];
 export const testimonialsData = [
