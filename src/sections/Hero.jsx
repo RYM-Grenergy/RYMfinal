@@ -1,6 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import patentLogo from '../assets/images/Patentend logo.jpg';
+import iso1Logo from '../assets/images/ISO1.jpg';
+import iso2Logo from '../assets/images/ISO2.jpg';
 const heroImage = 'https://res.cloudinary.com/uesw5nai/image/upload/v1789727059/rym_website/Tranform_Your_Energy_Systems_for_Tomorrows_Demands.jpg';
 
 const Hero = () => {
@@ -370,6 +373,56 @@ const Hero = () => {
                                         }
                                     `}
                                 </style>
+                            </div>
+                        </motion.div>
+
+                        {/* Certifications & Patents Logos (Only Logos - Large Size - Website Theme) */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                            className="mt-6 sm:mt-8 w-full flex items-center gap-4 sm:gap-6 flex-wrap"
+                        >
+                            {/* Patent Logo */}
+                            <div
+                                className="group relative flex items-center justify-center p-2.5 sm:p-3 rounded-2xl bg-[#111111]/90 border border-white/10 hover:border-emerald-500/50 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-105 cursor-pointer"
+                                title="Patented Technology"
+                            >
+                                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white/95 rounded-xl p-2 flex items-center justify-center border border-white/20 group-hover:border-emerald-400/40 transition-colors">
+                                    <img
+                                        src={patentLogo}
+                                        alt="Patented Technology"
+                                        className="w-full h-full object-contain filter group-hover:brightness-110 transition-all"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* ISO 1 Logo */}
+                            <div
+                                className="group relative flex items-center justify-center p-2.5 sm:p-3 rounded-2xl bg-[#111111]/90 border border-white/10 hover:border-emerald-500/50 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-105 cursor-pointer"
+                                title="ISO Certification"
+                            >
+                                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white/95 rounded-xl p-2 flex items-center justify-center border border-white/20 group-hover:border-emerald-400/40 transition-colors">
+                                    <img
+                                        src={iso1Logo}
+                                        alt="ISO Certification"
+                                        className="w-full h-full object-contain filter group-hover:brightness-110 transition-all"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* ISO 2 Logo */}
+                            <div
+                                className="group relative flex items-center justify-center p-2.5 sm:p-3 rounded-2xl bg-[#111111]/90 border border-white/10 hover:border-emerald-500/50 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_0_30px_rgba(16,185,129,0.4)] transition-all duration-300 hover:scale-105 cursor-pointer"
+                                title="ISO Compliance"
+                            >
+                                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-white/95 rounded-xl p-2 flex items-center justify-center border border-white/20 group-hover:border-emerald-400/40 transition-colors">
+                                    <img
+                                        src={iso2Logo}
+                                        alt="ISO Compliance"
+                                        className="w-full h-full object-contain filter group-hover:brightness-110 transition-all"
+                                    />
+                                </div>
                             </div>
                         </motion.div>
                     </div>
